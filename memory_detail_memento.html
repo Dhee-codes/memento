@@ -1,0 +1,266 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+<title>Graduation Brunch - Memento</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=DM+Sans:wght@400;500;700&amp;family=Great+Vibes&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#f4ded4",
+                    "inverse-on-surface": "#ffede5",
+                    "secondary-fixed": "#ffdbcf",
+                    "on-primary-fixed": "#331200",
+                    "tertiary-fixed": "#ffdea5",
+                    "on-primary-fixed-variant": "#773200",
+                    "on-surface-variant": "#574237",
+                    "surface-container": "#ffeae0",
+                    "surface-container-high": "#fae4da",
+                    "on-primary-container": "#592400",
+                    "on-secondary-container": "#5b1b00",
+                    "inverse-primary": "#ffb68f",
+                    "primary-fixed-dim": "#ffb68f",
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#9c4400",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#fff1eb",
+                    "tertiary-fixed-dim": "#ecc06d",
+                    "outline": "#8b7265",
+                    "inverse-surface": "#3a2e27",
+                    "surface-bright": "#fff8f6",
+                    "secondary": "#a83900",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#f4ded4",
+                    "primary-container": "#f47a2a",
+                    "on-secondary-fixed-variant": "#802a00",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#ffb59a",
+                    "tertiary-container": "#be9648",
+                    "tertiary": "#79590d",
+                    "on-error": "#ffffff",
+                    "on-background": "#241913",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#380d00",
+                    "surface-dim": "#ebd6cc",
+                    "primary-fixed": "#ffdbca",
+                    "on-tertiary": "#ffffff",
+                    "primary": "#9c4400",
+                    "on-tertiary-fixed": "#261900",
+                    "surface": "#fff8f6",
+                    "on-tertiary-fixed-variant": "#5d4200",
+                    "on-surface": "#241913",
+                    "outline-variant": "#dec0b2",
+                    "secondary-container": "#ff6a2a",
+                    "on-tertiary-container": "#453000",
+                    "background": "#fff8f6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "md": "24px",
+                    "safe-margin": "20px",
+                    "sm": "12px",
+                    "lg": "32px",
+                    "xs": "4px",
+                    "xl": "48px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+                    "label-sm": ["DM Sans", "sans-serif"],
+                    "body-md": ["DM Sans", "sans-serif"],
+                    "body-lg": ["DM Sans", "sans-serif"],
+                    "accent-script": ["Great Vibes", "cursive"],
+                    "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+                    "display-chunky": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            "fontSize": {
+                    "headline-md": ["22px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "accent-script": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "headline-lg": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "display-chunky": ["36px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .scrolled-header {
+            background-color: rgba(255, 248, 246, 0.9);
+            backdrop-filter: blur(12px);
+        }
+        .bento-item {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .bento-item:active {
+            transform: scale(0.96);
+        }
+        body {
+            background-color: #fff8f6;
+            color: #241913;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-safe-margin h-16 w-full transition-all duration-300 bg-surface/90 backdrop-blur-sm">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-primary-container/10 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<h1 class="font-accent-script text-accent-script text-primary flex-1 text-center truncate px-4">Graduation Brunch</h1>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-primary-container/10 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-primary">edit</span>
+</button>
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-primary-container/10 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-primary">ios_share</span>
+</button>
+</div>
+</header>
+<main class="pt-20 pb-32 px-safe-margin max-w-2xl mx-auto space-y-lg">
+<!-- Header Section -->
+<section class="space-y-sm text-center">
+<p class="font-body-lg text-body-lg text-on-surface-variant italic">
+                “Celebrating Sarah's big day with the best pastries in town.”
+            </p>
+<div class="flex items-center justify-center gap-2">
+<span class="px-3 py-1 bg-tertiary-container/10 text-tertiary rounded-full font-label-sm text-label-sm">May 15, 2026</span>
+<span class="px-3 py-1 bg-secondary-container/10 text-secondary rounded-full font-label-sm text-label-sm">Family Celebration</span>
+</div>
+</section>
+<!-- Order Detail Card -->
+<section>
+<div class="bg-surface-container-low rounded-lg p-md shadow-sm border border-outline-variant/30 flex gap-md items-start">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+</div>
+<div class="space-y-xs">
+<h3 class="font-headline-md text-headline-md text-on-surface">The Celebration Bundle</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        12 Assorted Croissants, 6 Pain au Chocolat, and a customized Graduation Tart.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Our View (Bakery Photos) -->
+<section class="space-y-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md text-on-surface">Our view</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bakery Favorites</span>
+</div>
+<div class="grid grid-cols-2 gap-sm">
+<div class="aspect-square bg-surface-variant rounded-lg overflow-hidden bento-item shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A professional high-angle culinary shot of a dozen perfectly golden-brown, flaky croissants arranged in a neat grid on a rustic marble countertop. Warm, sunny morning light creates soft shadows, emphasizing the buttery layers. The aesthetic is clean and appetizing, with a warm color palette of honey, cream, and toasted brown." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABZ1b1JQnA2DXtEtdSU4HMRPyhl1ZnEthOu7bmD-Qi4ULH-6hZCYgSMiZRRpd9dlfZjTjEkil1n6lUgSBKobvtpKu4YNG-kYLud4tg8yYOQR15PHgcLEkm47p5vWrZD1TyN5Y6Mzy2oDIHn61aiAnjRLuliWyXHMqUbdRsW89zdwA6_Dy3PTlKhCYXQ13YQIdbNiIs0bbopTVvpj0xOZ_DO4IPb7psQuJDp6tS9s1JyE33NGFFUKSnyQ">
+</div>
+<div class="grid grid-rows-2 gap-sm">
+<div class="bg-surface-variant rounded-lg overflow-hidden bento-item shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A close-up shot of a signature Graduation Tart from Gifthie's Cuisine. The tart features a crisp shortcrust base, luscious vanilla bean pastry cream, and a vibrant arrangement of fresh berries and a small dark chocolate graduation cap decoration. Soft, diffused lighting highlights the glossy glaze of the berries in a luxurious, warm scrapbook style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkAzcK2uoFFf5TeaU1Ca2F__gmz99MWqUJNMOGHb0aIlwTKTJ7_uNunFtDUdkSrK-q6Fe0nMx-WRxVHdjh4mO-28fO1IDHQp0XegZOaQFa7yrDvAQwxsl853UAYIF_7uufnyxaXYuPXAyAD4MumgSN3j4h5jY311mzUwT4qF1TGTu11ZTma_Joz0LBECCK-4RxsXeERYj5Dr-4n5_YYLg_MXdf-2MEeotWf2elJSBzBsRMCpyvKRrmhg">
+</div>
+<div class="bg-surface-variant rounded-lg overflow-hidden bento-item shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Six artisanal Pain au Chocolat pastries stacked elegantly on a wooden board. The lighting is cozy and intimate, with deep sienna tones and golden highlights on the pastry crusts. A dusting of powdered sugar adds a touch of sweetness to the composition, embodying a nostalgic, heartwarming food memory." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMvvhpYZJEzks-moF1JLtHI8RCttyOQ6wGO3hRetjsiesLN2nPYiI-JU_RHx_VbtcKDyUJ_UzBerVLKmFMnUr4zg4WJ_8A-DXsaSeWiuOfs2IwlMre36spwPmvJjthk799yZr5cdnTX7awqFKX_wdzP3hxwNajAHCYDryZv-_7NgpysZTkqg1kEgaDbd2olt9qdPx_IWltv9dNypJfjuB3EhpCrDC5wmwvExvtenH0S6pbul1HUjCQsg">
+</div>
+</div>
+</div>
+</section>
+<!-- Your View (Customer Photos) -->
+<section class="space-y-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md text-on-surface">Your view</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 memories shared</span>
+</div>
+<div class="grid grid-cols-3 gap-sm">
+<div class="aspect-square bg-surface-variant rounded-lg overflow-hidden bento-item shadow-sm relative group">
+<img class="w-full h-full object-cover" data-alt="A candid, heartwarming photo of a happy family of four sitting around a sun-drenched wooden dining table during a brunch celebration. Everyone is smiling and laughing, with Sarah in the center wearing a graduation sash. The scene is filled with a soft glow, rich orange and brown hues, and a tactile, scrapbook-like feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLhMnoWL_R0khhVSMSWz4T0T-5MBlkLuROWP_VSedexoPFZiRfrTikOGfv-y62bAakxgVLSAhhfpNtL27JMhIkx6XnxZSSknwsxMQ5HD53-nY1tfyG2NS7zL8Qe8x8fdMbekyC8eDf7FO1aQjIxkbHEP_VARuQ4eBe2e1YbBoVGv98S6iVuC3GDstbpq6IDKS6Q0_8ytEA_0PtsVEryay13m2bDuEXDtW9OAjpL2UH9SctA4ESj5NnUQ">
+<div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="aspect-square bg-surface-variant rounded-lg overflow-hidden bento-item shadow-sm relative group">
+<img class="w-full h-full object-cover" data-alt="A joyful close-up of two people clinking glasses of fresh orange juice over a table filled with half-eaten pastries. The focus is on the toasted colors of the food and the warm skin tones of the hands. The lighting is vibrant and optimistic, capturing a fleeting moment of celebration in a nostalgic, tactile UI style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPCh1Hrc3syBEFCvzDc2YfataY7jf_MzaO1seZYmPBOq8jeVWNcqZWOrVOUCCxkxxYe1mR7shhA4bw0C6hUakYyaj4oVY0J1X-LOV0xOp9n4v244neR9evl1GkIAEF5QPFnEcLW3-PQX4Nw3sebAP1c1306AXOthJYQ1IHMyj71LvMKzeaWG1W5rqNBZ_o9n9qC_RDT-Kfx1rjWKfOzvuHxDFptobgpBABiBw1G9GESGRzfiequ6YNqw">
+<div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+<button class="aspect-square border-2 border-dashed border-outline-variant rounded-lg flex flex-col items-center justify-center gap-1 hover:bg-surface-container-high transition-colors group">
+<span class="material-symbols-outlined text-outline group-hover:scale-110 transition-transform">add</span>
+<span class="font-label-sm text-label-sm text-outline">Add your photos</span>
+</button>
+</div>
+</section>
+<!-- Action Section -->
+<section class="space-y-md pt-lg">
+<div class="flex flex-col items-center gap-2">
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Relive the moment</p>
+<button class="w-full h-14 bg-gradient-to-r from-primary to-secondary text-on-primary rounded-full font-headline-md text-headline-md flex items-center justify-center gap-3 shadow-lg active:scale-95 transition-all">
+                    Relive this order
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+</button>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Order it again and relive the moment.</p>
+</div>
+<button class="w-full py-4 border-2 border-secondary text-secondary rounded-full font-label-sm text-label-sm uppercase tracking-widest hover:bg-secondary/5 transition-colors">
+                Share memory
+            </button>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Contextual) -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-2 py-3 pb-safe bg-surface/90 dark:bg-surface-container-high/90 backdrop-blur-md shadow-[0_-4px_20px_rgba(156,68,0,0.08)] rounded-t-lg">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:opacity-80" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+<span class="font-label-sm text-label-sm">Memories</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:opacity-80" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-label-sm text-label-sm mt-1">Order</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:opacity-80" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm mt-1">Profile</span>
+</a>
+</nav>
+<script>
+        // Micro-interactions
+        document.querySelectorAll('.bento-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.zIndex = "10";
+            });
+            item.addEventListener('mouseleave', () => {
+                item.style.zIndex = "1";
+            });
+        });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('scrolled-header', 'shadow-sm');
+            } else {
+                header.classList.remove('scrolled-header', 'shadow-sm');
+            }
+        });
+    </script>
+</body></html>

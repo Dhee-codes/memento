@@ -1,0 +1,270 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+<title>Memory Lane | Gifthie's Cuisine</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=DM+Sans:wght@400;500;600&amp;family=Playfair+Display:ital@0;1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            -webkit-tap-highlight-color: transparent;
+            scroll-behavior: smooth;
+        }
+        .timeline-line {
+            background: linear-gradient(to bottom, transparent, #dec0b2 15%, #dec0b2 85%, transparent);
+        }
+        .scrapbook-tape {
+            background: rgba(244, 122, 42, 0.2);
+            backdrop-filter: blur(2px);
+            transform: rotate(-2deg);
+        }
+        @keyframes subtle-float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-animation {
+            animation: subtle-float 4s ease-in-out infinite;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#fff1eb",
+                        "on-surface": "#241913",
+                        "on-secondary-container": "#5b1b00",
+                        "surface-container": "#ffeae0",
+                        "tertiary-container": "#be9648",
+                        "surface-tint": "#9c4400",
+                        "surface-container-high": "#fae4da",
+                        "tertiary": "#79590d",
+                        "secondary": "#a83900",
+                        "surface": "#fff8f6",
+                        "secondary-fixed-dim": "#ffb59a",
+                        "primary-fixed": "#ffdbca",
+                        "on-primary-fixed-variant": "#773200",
+                        "inverse-surface": "#3a2e27",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ecc06d",
+                        "on-primary-container": "#592400",
+                        "inverse-primary": "#ffb68f",
+                        "outline": "#8b7265",
+                        "on-primary": "#ffffff",
+                        "primary": "#9c4400",
+                        "on-tertiary-fixed": "#261900",
+                        "inverse-on-surface": "#ffede5",
+                        "on-surface-variant": "#574237",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#fff8f6",
+                        "on-tertiary-fixed-variant": "#5d4200",
+                        "surface-container-highest": "#f4ded4",
+                        "primary-container": "#f47a2a",
+                        "primary-fixed-dim": "#ffb68f",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#ebd6cc",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#453000",
+                        "secondary-container": "#ff6a2a",
+                        "outline-variant": "#dec0b2",
+                        "on-error-container": "#93000a",
+                        "background": "#fff8f6",
+                        "tertiary-fixed": "#ffdea5",
+                        "on-secondary-fixed": "#380d00",
+                        "on-primary-fixed": "#331200",
+                        "secondary-fixed": "#ffdbcf",
+                        "on-background": "#241913",
+                        "surface-variant": "#f4ded4",
+                        "on-secondary-fixed-variant": "#802a00",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "48px",
+                        "md": "24px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "sm": "12px",
+                        "safe-margin": "20px",
+                        "lg": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+                        "label-sm": ["DM Sans", "sans-serif"],
+                        "body-lg": ["DM Sans", "sans-serif"],
+                        "accent-script": ["Playfair Display", "serif"],
+                        "display-chunky": ["Plus Jakarta Sans", "sans-serif"],
+                        "body-md": ["DM Sans", "sans-serif"],
+                        "headline-lg": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["22px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "accent-script": ["24px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "display-chunky": ["36px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- Top App Bar -->
+<header class="flex justify-between items-center px-safe-margin h-16 w-full fixed top-0 z-50 bg-surface dark:bg-surface-container-highest shadow-sm">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-primary-container/10 transition-transform active:scale-95 text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-display-chunky text-[24px] text-primary dark:text-primary-fixed-dim">Gifthie's Cuisine</h1>
+<div class="w-10 h-10 rounded-full bg-surface-variant overflow-hidden border-2 border-primary-container/20">
+<img class="w-full h-full object-cover" data-alt="A warm, professional profile headshot of a person with a friendly expression, set against a soft-focus bakery background with warm amber lighting and organic textures, matching the nostalgic and personal brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeBd4EZvTzQ2Zkp1vz0AkWpNuBUbtrBrvYb8v7mFt_gJZZTKBZLBsq9j1cHGrQujfzOnE_pysCiKbkQ8kHUy5sBdpvNMdjExt4ZnIS3MomKFAxIY11ZjWmsuVO0u1y1RxsFLSs-kuMcKh6DQKQaAuMFZDwCshN8L65EDIAyyy0-UaCjtwpJ4l34v00l4AAiW_xj3p4mmKjr4oULKM1cYeAW7ZZ52SjVOUdha1o6S9-tufAFW9wO4AIwg">
+</div>
+</header>
+<main class="pt-24 px-safe-margin max-w-2xl mx-auto">
+<!-- Header Section -->
+<section class="mb-lg">
+<h2 class="font-display-chunky text-display-chunky text-primary mb-xs">Memory Lane</h2>
+<p class="font-body-md text-on-surface-variant">Every moment, in order.</p>
+</section>
+<!-- Timeline Container -->
+<div class="relative space-y-xl">
+<!-- Vertical Timeline Line -->
+<div class="absolute left-4 top-4 bottom-4 w-0.5 timeline-line z-0"></div>
+<!-- Timeline Entry 1 -->
+<article class="relative pl-12 z-10">
+<!-- Timeline Dot -->
+<div class="absolute left-2.5 top-2 w-3.5 h-3.5 bg-primary-container rounded-full border-4 border-surface shadow-sm"></div>
+<div class="bg-white rounded-lg p-md shadow-[0_4px_20px_rgba(156,68,0,0.08)] transform hover:-rotate-1 transition-all duration-300">
+<span class="font-label-sm text-label-sm text-primary-container uppercase mb-xs block">March 2, 2026</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-md">Graduation Brunch</h3>
+<!-- Photo Collage -->
+<div class="relative h-64 w-full mt-4">
+<!-- Main Large Photo -->
+<div class="absolute inset-0 w-3/4 h-5/6 rounded-lg overflow-hidden border-4 border-white shadow-md z-10 transform -rotate-2">
+<img class="w-full h-full object-cover" data-alt="A beautifully decorated table for a graduation brunch, featuring a variety of artisanal pastries, colorful fruit platters, and elegant floral arrangements. The scene is bathed in bright, natural morning sunlight with a warm, celebratory atmosphere in a cozy café setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDry_s0U2tLnMeoWSSw7Jyecubi-zR_hFSL8qN2fCp3IKaygAhkRGgCMXqe02ruW4VYRJtidw78KZf70eK0d17tV6hondZ99OjRK5m8Zqt2G4LKmrznNDwxHGxSZbEodgtdkQM510fj0kfRTnxVRVYoTQrXxLvcgwQqvPIdowWjezi6Yp72MDfdw1njpjD4ME6Lq_M2Dzfhp_dsDx4a8Wc7LZUbzo2rNssdcYaLQ4uax3tXvkSKGXcsTw">
+</div>
+<!-- Secondary Overlapping Photo -->
+<div class="absolute bottom-0 right-0 w-1/2 h-3/5 rounded-lg overflow-hidden border-4 border-white shadow-lg z-20 transform rotate-3">
+<img class="w-full h-full object-cover" data-alt="Close-up of a happy group of friends laughing and toasting with sparkling cider and flaky croissants at a celebratory brunch. The lighting is warm and golden, emphasizing the joy and nostalgia of the graduation event." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm1BBfxMrx84F1b_HV3m3FPSuAhdL7g_3qPy-zxp6ZT4gmL7XmQzb539CqwO00eKudVa9Ickg1JJyKR44SzrDXVA4gEHPpFBTzIL7kkWNqRSctoqOoT5Y6quDkXKx_Z5bO_MEr-8kujXf5QzEyO7o6x1-ndADj88FHW1HM5KdCX8PFzxZsCP4-q4hvhtor0RnswcFurEsQYF1fa-HmHcA3RKHbeyhr1kcocvICkGASc3MpHfg0vM0ppw">
+</div>
+<!-- Washi Tape Accent -->
+<div class="absolute -top-2 left-1/4 w-12 h-4 scrapbook-tape z-30"></div>
+</div>
+</div>
+</article>
+<!-- Timeline Entry 2 -->
+<article class="relative pl-12 z-10">
+<div class="absolute left-2.5 top-2 w-3.5 h-3.5 bg-primary-container rounded-full border-4 border-surface shadow-sm"></div>
+<div class="bg-white rounded-lg p-md shadow-[0_4px_20px_rgba(156,68,0,0.08)] transform hover:rotate-1 transition-all duration-300">
+<span class="font-label-sm text-label-sm text-primary-container uppercase mb-xs block">February 24, 2026</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-md">Sunday Morning Treats</h3>
+<div class="relative h-64 w-full mt-4">
+<div class="absolute top-0 right-0 w-3/4 h-5/6 rounded-lg overflow-hidden border-4 border-white shadow-md z-10 transform rotate-1">
+<img class="w-full h-full object-cover" data-alt="A rustic wooden kitchen table covered in flour, with freshly baked cinnamon rolls still in their pan, steam rising gently. The shot is captured from a top-down angle in a warm, domestic kitchen with soft, ambient afternoon light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjvvrzWXFNqanqkqkFSxs-mG1L0hlkR1QmLUQlzsBeKb5ehelUvqq_noOrGasHsz_S9JvMv34Fny2qu-knQYGHqVOJJd0wptZoaLQQ8JNar3uyC5DYbUdYAi6g-3UQeXgrPOCGxU8oCLl68gyvoxXd9TOIxFU5wNv_J5-w8lJh51Bizt-xgN9ZFNBBGnwHdXGGyml6ATuS1-yadBfBg-K4agRTDq4TYf5PKcu49aArdlgtRpvpUJhWTA">
+</div>
+<div class="absolute bottom-0 left-0 w-1/2 h-3/5 rounded-lg overflow-hidden border-4 border-white shadow-lg z-20 transform -rotate-6">
+<img class="w-full h-full object-cover" data-alt="A close-up of hands pouring thick, white icing over warm pastries. The focus is sharp on the texture of the glaze, with a warm, cream-colored background and soft shadows that give a tactile, scrapbook-like feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY6f7Ur5sK5IKzoGebFyH1ezcbuNa26UVeZ0aKS7sKgN1oa_-B-R2Wh0rsXfOF-rOeOWt-a4sXdyBh1ybOkN-fQyZaz9i4jTPS1HvCJ_z6OXhsE2utl4j733EgyJWVXlWB7w82rX5Y0LZiRll6q4FTe2MZlM2_j3a5-2XfTK2V1jq7DTw7xQUuHxaMQK_Saamtg5DOFxaNIJRgtnsIZAOBda2R6vcfY3jmb9GB0oeMAO9fW2aPf9Cyuw">
+</div>
+<div class="absolute top-1/2 -right-2 w-10 h-4 scrapbook-tape z-30 rotate-90"></div>
+</div>
+</div>
+</article>
+<!-- Timeline Entry 3 -->
+<article class="relative pl-12 z-10">
+<div class="absolute left-2.5 top-2 w-3.5 h-3.5 bg-primary-container rounded-full border-4 border-surface shadow-sm"></div>
+<div class="bg-white rounded-lg p-md shadow-[0_4px_20px_rgba(156,68,0,0.08)] transform hover:-rotate-1 transition-all duration-300">
+<span class="font-label-sm text-label-sm text-primary-container uppercase mb-xs block">February 14, 2026</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-md">Valentine's Special Bake</h3>
+<div class="grid grid-cols-2 gap-2 mt-4">
+<div class="aspect-square rounded-lg overflow-hidden border-2 border-white shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A tray of heart-shaped raspberry macarons with a creamy filling, arranged neatly on a pastel pink plate. The lighting is soft and high-key, creating a romantic and sweet aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyxKoP0Vy_E_zrp7vJGPxj2oZkgT3SPioVs5U3aXGBzax-3dAO9UnF4GVXp2kKFA0JMtgAeQhaW5kUtDlTn5Tr4JhEsrcvK5Zp05HjO9gu6MrpGRY_915QuL3tL9aX4EFs4Zv2Dp4140kXDxSrSwJQ3hw4NHxYM_UAA6oXEvpZy7I-ydZdhv6QtSkkMNb_nDG2r_L2LNFYXgmQGWpsv4AlaRd2tvxCylDIBJO-S_Q1Ysrp8kXrIU8mHg">
+</div>
+<div class="aspect-square rounded-lg overflow-hidden border-2 border-white shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A cozy indoor scene with a candle lit next to a box of assorted chocolates and pastries. The overall mood is intimate and nostalgic, with deep oranges and warm browns in the color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6mXYvRCF9YR4cKBiUus9ZusAg14Bv04cBLN-Q734lTn--1foMIqHm0jbwsSWyFYq8HLcdAqEefk5vEIIl-SL24m_uDTpd4TzEbIfZ4NsFcgk9qYOTxhYdXIT5TxAJjoKoIjrttA8OuFTFHMitrY3BZtuv2FaVfi_wKLO57Z8lunwFNy_Iw_or0lONhYBemmPVvAgdCzJI1i0_vEI4d1yJoTOEdbHChAiGBPCz8QK55sqCB4WwQPZZFw">
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Infinite Scroll Loader Mockup -->
+<div class="py-xl flex flex-col items-center justify-center">
+<div class="w-8 h-8 border-4 border-primary-container/20 border-t-primary-container rounded-full animate-spin"></div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-sm">Reliving more moments...</p>
+</div>
+</main>
+<!-- Floating Action Button (Contextual) -->
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-gradient-to-br from-primary-container to-secondary-container text-white rounded-full shadow-lg flex items-center justify-center active:scale-90 transition-all z-40 hover:shadow-xl">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-2 py-3 pb-safe bg-surface/90 dark:bg-surface-container-high/90 backdrop-blur-md shadow-[0_-4px_20px_rgba(156,68,0,0.08)] rounded-t-lg">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:opacity-80 group" href="#">
+<span class="material-symbols-outlined mb-1 group-active:scale-90 transition-transform" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined mb-1 active-icon" data-icon="auto_stories">auto_stories</span>
+<span class="font-label-sm text-label-sm">Memories</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:opacity-80 group" href="#">
+<span class="material-symbols-outlined mb-1 group-active:scale-90 transition-transform" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-label-sm text-label-sm">Order</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:opacity-80 group" href="#">
+<span class="material-symbols-outlined mb-1 group-active:scale-90 transition-transform" data-icon="person">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+<script>
+        // Simple Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('article').forEach(article => {
+            article.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(article);
+        });
+
+        // Tap interactions for cards
+        document.querySelectorAll('article div.bg-white').forEach(card => {
+            card.addEventListener('touchstart', () => {
+                card.style.transform = 'scale(0.98)';
+            });
+            card.addEventListener('touchend', () => {
+                card.style.transform = '';
+            });
+        });
+    </script>
+</body></html>

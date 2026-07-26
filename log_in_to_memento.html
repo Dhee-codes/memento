@@ -1,0 +1,172 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+<title>Log in | Memento</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=DM+Sans:wght@400;600&amp;family=Playfair+Display&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#fff8f6",
+                    "secondary": "#a83900",
+                    "surface-tint": "#9c4400",
+                    "on-primary-container": "#592400",
+                    "tertiary-fixed": "#ffdea5",
+                    "primary-container": "#f47a2a",
+                    "tertiary-container": "#be9648",
+                    "outline-variant": "#dec0b2",
+                    "surface-container-highest": "#f4ded4",
+                    "on-background": "#241913",
+                    "inverse-on-surface": "#ffede5",
+                    "secondary-fixed": "#ffdbcf",
+                    "background": "#fff8f6",
+                    "surface-container-high": "#fae4da",
+                    "on-secondary-fixed": "#380d00",
+                    "primary": "#9c4400",
+                    "inverse-surface": "#3a2e27",
+                    "primary-fixed-dim": "#ffb68f",
+                    "on-surface": "#241913",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed-dim": "#ecc06d",
+                    "inverse-primary": "#ffb68f",
+                    "on-tertiary-container": "#453000",
+                    "surface-variant": "#f4ded4",
+                    "on-tertiary-fixed": "#261900",
+                    "error": "#ba1a1a",
+                    "tertiary": "#79590d",
+                    "outline": "#8b7265",
+                    "on-surface-variant": "#574237",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#773200",
+                    "surface": "#fff8f6",
+                    "surface-dim": "#ebd6cc",
+                    "surface-container": "#ffeae0",
+                    "primary-fixed": "#ffdbca",
+                    "on-primary-fixed": "#331200",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#5b1b00",
+                    "surface-container-low": "#fff1eb",
+                    "on-error": "#ffffff",
+                    "secondary-container": "#ff6a2a",
+                    "on-secondary-fixed-variant": "#802a00",
+                    "secondary-fixed-dim": "#ffb59a",
+                    "on-tertiary-fixed-variant": "#5d4200",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "base": "8px",
+                    "lg": "32px",
+                    "sm": "12px",
+                    "xl": "48px",
+                    "safe-margin": "20px",
+                    "md": "24px"
+            },
+            "fontFamily": {
+                    "accent-script": ["Playfair Display", "serif"],
+                    "label-sm": ["DM Sans", "sans-serif"],
+                    "body-lg": ["DM Sans", "sans-serif"],
+                    "display-chunky": ["Plus Jakarta Sans", "sans-serif"],
+                    "body-md": ["DM Sans", "sans-serif"],
+                    "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+                    "headline-lg": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            "fontSize": {
+                    "accent-script": ["24px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                    "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                    "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                    "display-chunky": ["36px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                    "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                    "headline-md": ["22px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                    "headline-lg": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom Honey Glaze to Tangerine Burst Gradient */
+        .bg-primary-gradient {
+            background: linear-gradient(135deg, #f47a2a 0%, #ff6a2a 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col items-center justify-center p-safe-margin">
+<!-- Login Container -->
+<main class="w-full max-w-sm flex flex-col items-center animate-in fade-in duration-700">
+<!-- Top Logo Mark -->
+<div class="mb-lg">
+<img alt="Memento Logo Ring Mark" class="w-20 h-20 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtyuv3hR4eEMjbXvtQ-2tcamg7bbGjE8GGZ_T9g7g7BcufPu_ThHHS9BpxBFuzkBQmG6J9gjo5GpCPjHQAT0hNbEx0BPqGzyfUnV9NUMpbyoAtLXM-KiqUitEBO894gugPMxwmKD5Cytlto1R4_fDe0B3M9i2Skw4mvhEgtgxdEYtOdttqFbmtg7Ahv26agL1BXmM64pJGMkqgVqSBaAtAcc_bgR7Hg5dwdnrbskeUEEkVcDuJztCfhpv3l_KdgBY5o4c">
+</div>
+<!-- Headline -->
+<header class="text-center mb-xl">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+                Welcome back,
+            </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs">
+                Your culinary scrapbooks are waiting.
+            </p>
+</header>
+<!-- Form -->
+<form class="w-full space-y-md" onsubmit="event.preventDefault();">
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant ml-2" for="email">Email Address</label>
+<div class="relative group">
+<input class="w-full h-14 px-6 bg-surface-container-low border-none rounded-full font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/40 focus:ring-2 focus:ring-primary-container/30 transition-all shadow-inner" id="email" placeholder="hello@example.com" type="email">
+</div>
+</div>
+<!-- Login Button -->
+<button class="w-full h-14 rounded-full bg-primary-gradient text-on-primary font-bold shadow-lg shadow-primary-container/20 active:scale-95 transition-transform duration-200 flex items-center justify-center gap-2" type="submit">
+<span class="font-label-sm text-label-sm uppercase tracking-widest">Log in</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</form>
+<!-- Footer Actions -->
+<footer class="mt-xl text-center">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors group" href="#">
+                New to Memento? <span class="font-bold text-primary group-hover:underline">Create an account</span>
+</a>
+<div class="mt-lg pt-lg border-t border-surface-container-high w-16 mx-auto"></div>
+<div class="mt-base flex gap-md justify-center">
+<button class="p-4 rounded-full bg-surface-container-high text-on-surface-variant hover:bg-surface-variant transition-all active:scale-90">
+<span class="material-symbols-outlined">fingerprint</span>
+</button>
+<button class="p-4 rounded-full bg-surface-container-high text-on-surface-variant hover:bg-surface-variant transition-all active:scale-90">
+<span class="material-symbols-outlined">key</span>
+</button>
+</div>
+</footer>
+</main>
+<!-- Subtle Texture/Grain Overlay for Scrapbook feel -->
+<div class="fixed inset-0 pointer-events-none opacity-[0.03] mix-blend-multiply" style="background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png')"></div>
+<script>
+        // Simple micro-interaction for button press
+        const btn = document.querySelector('button[type="submit"]');
+        btn.addEventListener('click', () => {
+            // Optional: add loading state logic here
+            console.log('Logging in...');
+        });
+    </script>
+</body></html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+<title>Profile - Gifthie's Cuisine</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&amp;family=Plus+Jakarta+Sans:wght@700;800&amp;family=Playfair+Display&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#5d4200",
+                        "secondary-container": "#ff6a2a",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#ffdbca",
+                        "background": "#fff8f6",
+                        "on-tertiary-container": "#453000",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#fff8f6",
+                        "outline": "#8b7265",
+                        "surface-tint": "#9c4400",
+                        "on-secondary-fixed": "#380d00",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#5b1b00",
+                        "primary": "#9c4400",
+                        "surface": "#fff8f6",
+                        "inverse-surface": "#3a2e27",
+                        "primary-container": "#f47a2a",
+                        "tertiary-fixed": "#ffdea5",
+                        "surface-container-low": "#fff1eb",
+                        "secondary-fixed": "#ffdbcf",
+                        "secondary": "#a83900",
+                        "on-primary-fixed-variant": "#773200",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#ffb59a",
+                        "on-surface": "#241913",
+                        "tertiary-container": "#be9648",
+                        "on-secondary-fixed-variant": "#802a00",
+                        "tertiary-fixed-dim": "#ecc06d",
+                        "inverse-primary": "#ffb68f",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#261900",
+                        "on-background": "#241913",
+                        "outline-variant": "#dec0b2",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#f4ded4",
+                        "surface-dim": "#ebd6cc",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#ffb68f",
+                        "surface-container-highest": "#f4ded4",
+                        "tertiary": "#79590d",
+                        "on-primary-fixed": "#331200",
+                        "on-primary-container": "#592400",
+                        "surface-container-high": "#fae4da",
+                        "surface-container": "#ffeae0",
+                        "on-surface-variant": "#574237",
+                        "inverse-on-surface": "#ffede5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "xl": "48px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "lg": "32px",
+                        "base": "8px",
+                        "safe-margin": "20px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["DM Sans", "sans-serif"],
+                        "body-lg": ["DM Sans", "sans-serif"],
+                        "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+                        "body-md": ["DM Sans", "sans-serif"],
+                        "display-chunky": ["Plus Jakarta Sans", "sans-serif"],
+                        "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+                        "accent-script": ["Playfair Display", "serif"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "display-chunky": ["36px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-md": ["22px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "accent-script": ["24px", { "lineHeight": "1.2", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            background-color: #fff8f6;
+            color: #241913;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .profile-card-shadow {
+            box-shadow: 0 15px 35px -5px rgba(156, 68, 0, 0.08);
+        }
+        .input-inset-shadow {
+            box-shadow: inset 0 2px 4px 0 rgba(156, 68, 0, 0.04);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen flex flex-col font-body-md text-body-md overflow-x-hidden">
+<!-- Top AppBar (from JSON) -->
+<header class="flex justify-between items-center px-safe-margin h-16 w-full fixed top-0 z-50 bg-surface dark:bg-surface-container-highest shadow-sm">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary dark:text-primary-fixed-dim hover:bg-primary-container/10 p-2 rounded-full transition-transform active:scale-95">
+                menu
+            </button>
+<h1 class="font-display-chunky text-display-chunky text-primary dark:text-primary-fixed-dim text-[24px]">Gifthie's Cuisine</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container transition-transform active:scale-95">
+<img class="w-full h-full object-cover" data-alt="A professional, warm studio headshot of Sarah Doe, a middle-aged woman with a friendly smile, set against a soft cream-colored background that matches the app's light-mode aesthetic. The lighting is bright and airy, emphasizing her approachable personality. She wears a simple, toasted brown linen shirt, aligning with the brand's organic and sentimental color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR-9L8WKp5hGhLSJ0E5eI8k7-nrNPUcmL2_1wmmvr7g6-4WOaEQ93kGLec01zaLb5sc8YMX3OjK1-gMlxp3H4H040TlCI4U_iR7x59aGSlbBmH0Xq7dt41DmhJ_e7a3EEB-Xz6n2hlssJ7at3qWDTpW4E7mp-o7d7w3ICZRnfc0ZbZ599yG8j3jMpOWn33Mz4NhPfZQwe2t5abol0XR-REJq4Jk3vddypytEoFe2vuvd3mx6Ln7MHEYw">
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-grow pt-24 pb-32 px-safe-margin max-w-2xl mx-auto w-full">
+<!-- Profile Header Section -->
+<section class="flex items-center gap-md mb-xl animate-in fade-in slide-in-from-bottom-4 duration-700">
+<div class="w-24 h-24 rounded-full overflow-hidden shadow-lg border-4 border-white">
+<img class="w-full h-full object-cover" data-alt="Close up portrait of Sarah Doe, looking directly at the camera with a warm, optimistic expression. The photo is taken in natural, soft afternoon sunlight, creating a nostalgic, huggable scrapbook feel. The colors are dominated by warm honey glazes and soft peach tones, reflecting a deeply personal and culinary-themed atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEsooT860qbIKcoQCaUbFVniICxVQTeDsIl3qt6aUNMgW4jr4LBVCbY5ZuBApyneFw11w_Y1wCoelUeuBM0CuOHH89cFtr-PrtUPU9b-4PeXmsfQxvyfsQcZ80vYokPkEv4EU6x3OCUvN2B0RZwoFsqJq5kH-OoYKlVs0_u9NIPPeniIx7_cclx6VWEtoeEdDjRzPap_YvMqzIxGjUFOUKVT2a76w34t_w3T9rCrTStYcUIShRWXJpxg">
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Sarah Doe</h2>
+<p class="font-body-md text-on-surface-variant">sarah.doe@example.com</p>
+</div>
+</section>
+<!-- Profile Details List -->
+<section class="space-y-md">
+<div class="bg-surface-container-low p-md rounded-lg profile-card-shadow border border-outline-variant/30">
+<!-- Field: Name -->
+<div class="py-sm border-b border-outline-variant/20 last:border-0">
+<label class="font-label-sm text-label-sm text-primary uppercase tracking-wider block mb-xs">Name</label>
+<div class="font-body-lg text-body-lg text-on-surface">Sarah Doe</div>
+</div>
+<!-- Field: Email -->
+<div class="py-sm border-b border-outline-variant/20 last:border-0">
+<label class="font-label-sm text-label-sm text-primary uppercase tracking-wider block mb-xs">Email</label>
+<div class="font-body-lg text-body-lg text-on-surface">sarah.doe@example.com</div>
+</div>
+<!-- Field: Phone -->
+<div class="py-sm border-b border-outline-variant/20 last:border-0">
+<label class="font-label-sm text-label-sm text-primary uppercase tracking-wider block mb-xs">Phone Number</label>
+<div class="font-body-lg text-body-lg text-on-surface">+1 555-0123</div>
+</div>
+</div>
+<!-- Edit Action -->
+<div class="pt-sm flex justify-center">
+<button class="font-label-sm text-label-sm text-secondary hover:underline py-2 px-4 rounded-full transition-all active:scale-95 flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+                    Edit profile
+                </button>
+</div>
+</section>
+<!-- Branding / Footer Aesthetic -->
+<footer class="mt-xl text-center">
+<p class="font-accent-script text-accent-script text-outline/60 italic">Baking memories since 2026</p>
+</footer>
+</main>
+<!-- Navigation Shell (BottomNavBar) -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-2 py-3 pb-safe bg-surface/90 dark:bg-surface-container-high/90 backdrop-blur-md shadow-[0_-4px_20px_rgba(156,68,0,0.08)] rounded-t-lg">
+<!-- Home -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:opacity-80 transition-all" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<!-- Memories -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:opacity-80 transition-all" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-label-sm text-label-sm">Memories</span>
+</a>
+<!-- Order -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:opacity-80 transition-all" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-label-sm text-label-sm">Order</span>
+</a>
+<!-- Profile (Active) -->
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+<script>
+        // Simple ripple effect for buttons
+        document.querySelectorAll('button, a').forEach(elem => {
+            elem.addEventListener('click', function(e) {
+                // Micro-interaction logic can go here
+                console.log('Action triggered on:', this.innerText.trim());
+            });
+        });
+
+        // Entrance animation logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const profileItems = document.querySelectorAll('.animate-in');
+            profileItems.forEach((el, index) => {
+                el.style.animationDelay = `${index * 100}ms`;
+            });
+        });
+    </script>
+</body></html>
