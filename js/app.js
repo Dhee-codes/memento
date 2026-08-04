@@ -3,53 +3,53 @@
 // as their content becomes available, and tag their Memory Lane entry
 // with a matching data-memory-id.
 const MEMORIES = {
-    'graduation-brunch': {
-        title: 'Graduation Brunch',
-        description: "Celebrating Sarah's big day with the best pastries in town.",
-        date: 'May 15, 2026',
-        category: 'Family Celebration',
-        orderTitle: 'The Celebration Bundle',
-        orderDesc: '12 Assorted Croissants, 6 Pain au Chocolat, and a customized Graduation Tart.',
-        yourViewCount: '2 memories shared',
-        linkSlug: 'sarah-grad...',
-        isPublic: true,
-        // Real photos, carried over from the original hardcoded markup.
-        ourView: [
-            { large: true, src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuABZ1b1JQnA2DXtEtdSU4HMRPyhl1ZnEthOu7bmD-Qi4ULH-6hZCYgSMiZRRpd9dlfZjTjEkil1n6lUgSBKobvtpKu4YNG-kYLud4tg8yYOQR15PHgcLEkm47p5vWrZD1TyN5Y6Mzy2oDIHn61aiAnjRLuliWyXHMqUbdRsW89zdwA6_Dy3PTlKhCYXQ13YQIdbNiIs0bbopTVvpj0xOZ_DO4IPb7psQuJDp6tS9s1JyE33NGFFUKSnyQ', alt: 'Croissants' },
-            { src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCkAzcK2uoFFf5TeaU1Ca2F__gmz99MWqUJNMOGHb0aIlwTKTJ7_uNunFtDUdkSrK-q6Fe0nMx-WRxVHdjh4mO-28fO1IDHQp0XegZOaQFa7yrDvAQwxsl853UAYIF_7uufnyxaXYuPXAyAD4MumgSN3j4h5jY311mzUwT4qF1TGTu11ZTma_Joz0LBECCK-4RxsXeERYj5Dr-4n5_YYLg_MXdf-2MEeotWf2elJSBzBsRMCpyvKRrmhg', alt: 'Tart' },
-            { src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAMvvhpYZJEzks-moF1JLtHI8RCttyOQ6wGO3hRetjsiesLN2nPYiI-JU_RHx_VbtcKDyUJ_UzBerVLKmFMnUr4zg4WJ_8A-DXsaSeWiuOfs2IwlMre36spwPmvJjthk799yZr5cdnTX7awqFKX_wdzP3hxwNajAHCYDryZv-_7NgpysZTkqg1kEgaDbd2olt9qdPx_IWltv9dNypJfjuB3EhpCrDC5wmwvExvtenH0S6pbul1HUjCQsg', alt: 'Pain au Chocolat' },
-        ],
-        yourView: [
-            { src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCLhMnoWL_R0khhVSMSWz4T0T-5MBlkLuROWP_VSedexoPFZiRfrTikOGfv-y62bAakxgVLSAhhfpNtL27JMhIkx6XnxZSSknwsxMQ5HD53-nY1tfyG2NS7zL8Qe8x8fdMbekyC8eDf7FO1aQjIxkbHEP_VARuQ4eBe2e1YbBoVGv98S6iVuC3GDstbpq6IDKS6Q0_8ytEA_0PtsVEryay13m2bDuEXDtW9OAjpL2UH9SctA4ESj5NnUQ', alt: 'Family photo' },
-            { src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAPCh1Hrc3syBEFCvzDc2YfataY7jf_MzaO1seZYmPBOq8jeVWNcqZWOrVOUCCxkxxYe1mR7shhA4bw0C6hUakYyaj4oVY0J1X-LOV0xOp9n4v244neR9evl1GkIAEF5QPFnEcLW3-PQX4Nw3sebAP1c1306AXOthJYQ1IHMyj71LvMKzeaWG1W5rqNBZ_o9n9qC_RDT-Kfx1rjWKfOzvuHxDFptobgpBABiBw1G9GESGRzfiequ6YNqw', alt: 'Toast' },
-        ],
-    },
-    'sunday-morning-treats': {
-        title: 'Sunday Morning Treats',
-        description: 'No description added yet.',
-        date: 'February 24, 2026',
-        category: 'Not tagged yet',
-        orderTitle: 'Order details coming soon',
-        orderDesc: "This memory hasn't been linked to order details yet.",
-        yourViewCount: 'No photos shared yet',
-        linkSlug: 'sunday-morning-treats',
-        isPublic: true,
-        ourView: [],
-        yourView: [],
-    },
-    'valentines-special-bake': {
-        title: "Valentine's Special Bake",
-        description: 'No description added yet.',
-        date: 'February 14, 2026',
-        category: 'Not tagged yet',
-        orderTitle: 'Order details coming soon',
-        orderDesc: "This memory hasn't been linked to order details yet.",
-        yourViewCount: 'No photos shared yet',
-        linkSlug: 'valentines-special-bake',
-        isPublic: true,
-        ourView: [],
-        yourView: [],
-    },
+    // 'graduation-brunch': {
+    //     title: 'Graduation Brunch',
+    //     description: "Celebrating Sarah's big day with the best pastries in town.",
+    //     date: 'May 15, 2026',
+    //     category: 'Family Celebration',
+    //     orderTitle: 'The Celebration Bundle',
+    //     orderDesc: '12 Assorted Croissants, 6 Pain au Chocolat, and a customized Graduation Tart.',
+    //     yourViewCount: '2 memories shared',
+    //     linkSlug: 'sarah-grad...',
+    //     isPublic: true,
+    //     // Real photos, carried over from the original hardcoded markup.
+    //     ourView: [
+    //         { large: true, src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuABZ1b1JQnA2DXtEtdSU4HMRPyhl1ZnEthOu7bmD-Qi4ULH-6hZCYgSMiZRRpd9dlfZjTjEkil1n6lUgSBKobvtpKu4YNG-kYLud4tg8yYOQR15PHgcLEkm47p5vWrZD1TyN5Y6Mzy2oDIHn61aiAnjRLuliWyXHMqUbdRsW89zdwA6_Dy3PTlKhCYXQ13YQIdbNiIs0bbopTVvpj0xOZ_DO4IPb7psQuJDp6tS9s1JyE33NGFFUKSnyQ', alt: 'Croissants' },
+    //         { src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCkAzcK2uoFFf5TeaU1Ca2F__gmz99MWqUJNMOGHb0aIlwTKTJ7_uNunFtDUdkSrK-q6Fe0nMx-WRxVHdjh4mO-28fO1IDHQp0XegZOaQFa7yrDvAQwxsl853UAYIF_7uufnyxaXYuPXAyAD4MumgSN3j4h5jY311mzUwT4qF1TGTu11ZTma_Joz0LBECCK-4RxsXeERYj5Dr-4n5_YYLg_MXdf-2MEeotWf2elJSBzBsRMCpyvKRrmhg', alt: 'Tart' },
+    //         { src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAMvvhpYZJEzks-moF1JLtHI8RCttyOQ6wGO3hRetjsiesLN2nPYiI-JU_RHx_VbtcKDyUJ_UzBerVLKmFMnUr4zg4WJ_8A-DXsaSeWiuOfs2IwlMre36spwPmvJjthk799yZr5cdnTX7awqFKX_wdzP3hxwNajAHCYDryZv-_7NgpysZTkqg1kEgaDbd2olt9qdPx_IWltv9dNypJfjuB3EhpCrDC5wmwvExvtenH0S6pbul1HUjCQsg', alt: 'Pain au Chocolat' },
+    //     ],
+    //     yourView: [
+    //         { src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCLhMnoWL_R0khhVSMSWz4T0T-5MBlkLuROWP_VSedexoPFZiRfrTikOGfv-y62bAakxgVLSAhhfpNtL27JMhIkx6XnxZSSknwsxMQ5HD53-nY1tfyG2NS7zL8Qe8x8fdMbekyC8eDf7FO1aQjIxkbHEP_VARuQ4eBe2e1YbBoVGv98S6iVuC3GDstbpq6IDKS6Q0_8ytEA_0PtsVEryay13m2bDuEXDtW9OAjpL2UH9SctA4ESj5NnUQ', alt: 'Family photo' },
+    //         { src: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAPCh1Hrc3syBEFCvzDc2YfataY7jf_MzaO1seZYmPBOq8jeVWNcqZWOrVOUCCxkxxYe1mR7shhA4bw0C6hUakYyaj4oVY0J1X-LOV0xOp9n4v244neR9evl1GkIAEF5QPFnEcLW3-PQX4Nw3sebAP1c1306AXOthJYQ1IHMyj71LvMKzeaWG1W5rqNBZ_o9n9qC_RDT-Kfx1rjWKfOzvuHxDFptobgpBABiBw1G9GESGRzfiequ6YNqw', alt: 'Toast' },
+    //     ],
+    // },
+    // 'sunday-morning-treats': {
+    //     title: 'Sunday Morning Treats',
+    //     description: 'No description added yet.',
+    //     date: 'February 24, 2026',
+    //     category: 'Not tagged yet',
+    //     orderTitle: 'Order details coming soon',
+    //     orderDesc: "This memory hasn't been linked to order details yet.",
+    //     yourViewCount: 'No photos shared yet',
+    //     linkSlug: 'sunday-morning-treats',
+    //     isPublic: true,
+    //     ourView: [],
+    //     yourView: [],
+    // },
+    // 'valentines-special-bake': {
+    //     title: "Valentine's Special Bake",
+    //     description: 'No description added yet.',
+    //     date: 'February 14, 2026',
+    //     category: 'Not tagged yet',
+    //     orderTitle: 'Order details coming soon',
+    //     orderDesc: "This memory hasn't been linked to order details yet.",
+    //     yourViewCount: 'No photos shared yet',
+    //     linkSlug: 'valentines-special-bake',
+    //     isPublic: true,
+    //     ourView: [],
+    //     yourView: [],
+    // },
 };
 
 let currentMemoryId = null;
@@ -439,7 +439,7 @@ function initMemoryLaneScreen() {
         // Empty state toggle logic
         const emptyState = document.getElementById('memory-lane-empty-state');
         const timeline = memoryLaneScreen.querySelector('.memory-lane-timeline');
-        
+
         if (Object.keys(MEMORIES).length === 0) {
             if (timeline) timeline.style.display = 'none';
             if (emptyState) emptyState.style.display = 'block';
