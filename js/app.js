@@ -110,32 +110,12 @@ function renderEditMemory(memoryId) {
 
 document.addEventListener('DOMContentLoaded', () => {
     // Basic routing function
-    window.showScreen = function (screenId) {
-        document.querySelectorAll('.app-screen').forEach(screen => {
-            screen.classList.remove('active');
-        });
-        const target = document.getElementById(`screen-${screenId}`);
-        if (target) {
-            target.classList.add('active');
-            window.scrollTo(0, 0);
+    window.showScreen = function (screenId, memoryId) {
+        let url = (screenId === 'welcome' ? 'index' : screenId) + '.html';
+        if (memoryId) {
+            url += '?id=' + memoryId;
         }
-
-        // Update bottom nav
-        const bottomNav = document.getElementById('app-bottom-nav');
-        if (bottomNav) {
-            if (['welcome', 'login', 'join', 'edit-profile', 'edit-memory'].includes(screenId)) {
-                bottomNav.classList.add('hidden');
-            } else {
-                bottomNav.classList.remove('hidden');
-                bottomNav.querySelectorAll('.nav-item').forEach(nav => {
-                    if (nav.getAttribute('data-route') === screenId) {
-                        nav.classList.add('active');
-                    } else {
-                        nav.classList.remove('active');
-                    }
-                });
-            }
-        }
+        window.location.href = url;
     };
 
     // Global navigation intercept
@@ -145,20 +125,36 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const screenId = routeTarget.getAttribute('data-route');
             const memoryId = routeTarget.getAttribute('data-memory-id');
-            if (screenId === 'memory-detail') {
-                if (memoryId) {
-                    renderMemoryDetail(memoryId);
-                } else if (!currentMemoryId) {
-                    return; // no memory known yet — nothing to show
-                }
-            }
-            if (screenId === 'edit-memory') {
-                if (!currentMemoryId) return; // reached edit without a memory open
-                renderEditMemory(currentMemoryId);
-            }
-            showScreen(screenId);
+            showScreen(screenId, memoryId || currentMemoryId);
         }
     });
+
+    // Make sure the active screen class is added
+    const screen = document.querySelector('.app-screen');
+    if (screen) screen.classList.add('active');
+
+    // Update bottom nav active state based on URL
+    const bottomNav = document.getElementById('app-bottom-nav');
+    if (bottomNav) {
+        let currentPath = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
+        if (currentPath === 'index') currentPath = 'welcome';
+        bottomNav.querySelectorAll('.nav-item').forEach(nav => {
+            if (nav.getAttribute('data-route') === currentPath) {
+                nav.classList.add('active');
+            } else {
+                nav.classList.remove('active');
+            }
+        });
+    }
+
+    // Handle specific page inits based on URL parameters
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    if (window.location.pathname.includes('memory-detail')) {
+        renderMemoryDetail(id || 'graduation-brunch');
+    } else if (window.location.pathname.includes('edit-memory')) {
+        renderEditMemory(id || 'graduation-brunch');
+    }
 
     // Initialize screens
     initWelcomeScreen();

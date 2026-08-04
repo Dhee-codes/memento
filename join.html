@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+    <title>Memento - SPA</title>
+    <!-- External Fonts and Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="app-body">
+
+    <!-- SCREEN: JOIN -->
+    <div id="screen-join" class="app-screen join-screen">
+        <div class="join-bg-texture"></div>
+        <main class="join-container">
+            <!-- Top Logo Mark -->
+            <div class="join-header">
+                <div class="join-logo-wrapper">
+                    <img alt="Memento Ring Mark" class="join-logo-img"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6X3HPJm0POQ4QIPMOorFoOodKrnGwxgJ3YLpP38B8y9e47DGjY7hAP8YhcC9hgLWP8SoWYurdV0JBi8d_JfDxrlA_7lY09D11I1bXCHkRiQTiNYCWG92VrhRbZBBq3zGNNI4hdbkBhSIGd2zEr89BDPi-SgQXNUdvWMH1kstQR9sRm5FuTtr5j-CSMq-UIcF-Z8i1r8fnJBSbHR34Llbx3WfdDCsWENG1IfzjYlTZRXamgJpl7YCJAWa8kRwOkR9q4Go">
+                </div>
+                <div class="join-title-section">
+                    <h1 class="join-title">Let's start your memory lane</h1>
+                    <p class="join-subtitle">Baking memories since 2026. Join our culinary scrapbook.</p>
+                </div>
+            </div>
+            <!-- Form Section -->
+            <section class="join-form-section">
+                <form class="join-form" id="join-form">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Full Name</label>
+                        <div class="form-input-wrapper">
+                            <span class="material-symbols-outlined form-input-icon">person</span>
+                            <input class="form-input with-icon" id="name" placeholder="John Doe" type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="join-email">Email Address</label>
+                        <div class="form-input-wrapper">
+                            <span class="material-symbols-outlined form-input-icon">mail</span>
+                            <input class="form-input with-icon" id="join-email" placeholder="hello@cuisine.com"
+                                type="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="password">Create Password</label>
+                        <div class="form-input-wrapper">
+                            <span class="material-symbols-outlined form-input-icon">lock</span>
+                            <input class="form-input with-icon" id="password" placeholder="••••••••" type="password"
+                                required>
+                        </div>
+                    </div>
+                    <button class="primary-button join-submit-btn" type="submit">
+                        <span class="join-submit-text">Sign up</span>
+                        <span class="material-symbols-outlined join-submit-icon">arrow_forward</span>
+                    </button>
+                </form>
+            </section>
+            <!-- Footer Section -->
+            <footer class="login-footer">
+                <p class="login-footer-text">
+                    Already have an account?
+                    <button class="login-footer-link" data-route="login">Log in</button>
+                </p>
+                <div class="login-divider-wrapper">
+                    <div class="login-divider-line"></div>
+                    <div class="login-divider-icon-wrapper">
+                        <span class="material-symbols-outlined login-divider-icon">favorite</span>
+                    </div>
+                    <div class="login-divider-line"></div>
+                </div>
+                <p class="login-footer-security">
+                    Your memories are safely stored & encrypted
+                </p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Shared Bottom Navigation Shell -->
+    <nav class="app-bottom-nav hidden" id="app-bottom-nav">
+        <a class="nav-item active" href="#" data-route="home">
+            <span class="material-symbols-outlined">home</span>
+            <span class="nav-item-label">Home</span>
+        </a>
+        <a class="nav-item" href="#" data-route="memory-lane">
+            <span class="material-symbols-outlined">auto_stories</span>
+            <span class="nav-item-label">Memories</span>
+        </a>
+        <a class="nav-item" href="#">
+            <span class="material-symbols-outlined">shopping_bag</span>
+            <span class="nav-item-label">Order</span>
+        </a>
+        <a class="nav-item" href="#" data-route="profile">
+            <span class="material-symbols-outlined">person</span>
+            <span class="nav-item-label">Profile</span>
+        </a>
+    </nav>
+
+    <!-- Main Application Script -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
