@@ -120,6 +120,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Global navigation intercept
     document.addEventListener('click', (e) => {
+        const backBtn = e.target.closest('[data-action="back"]');
+        if (backBtn) {
+            e.preventDefault();
+            window.history.back();
+            return;
+        }
+
         const routeTarget = e.target.closest('[data-route]');
         if (routeTarget) {
             e.preventDefault();
@@ -429,6 +436,18 @@ function initEditProfileScreen() {
 function initMemoryLaneScreen() {
     const memoryLaneScreen = document.getElementById('screen-memory-lane');
     if (memoryLaneScreen) {
+        // Empty state toggle logic
+        const emptyState = document.getElementById('memory-lane-empty-state');
+        const timeline = memoryLaneScreen.querySelector('.memory-lane-timeline');
+        
+        if (Object.keys(MEMORIES).length === 0) {
+            if (timeline) timeline.style.display = 'none';
+            if (emptyState) emptyState.style.display = 'block';
+        } else {
+            if (timeline) timeline.style.display = 'block';
+            if (emptyState) emptyState.style.display = 'none';
+        }
+
         // Intersection Observer for scroll animations
         const observerOptions = {
             threshold: 0.1

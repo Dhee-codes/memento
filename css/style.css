@@ -791,24 +791,6 @@
     color: var(--color-primary);
 }
 
-.home-header-menu-btn {
-    color: var(--color-primary);
-    padding: 0.5rem;
-    background: transparent;
-    border: none;
-    border-radius: 9999px;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.home-header-menu-btn:hover {
-    background-color: rgba(244, 122, 42, 0.1);
-}
-
-.home-header-menu-btn:active {
-    transform: scale(0.95);
-}
-
 .home-main {
     padding-top: 5rem;
     padding-bottom: 8rem;
@@ -1195,7 +1177,7 @@
     gap: 1rem;
 }
 
-.profile-header-menu-btn {
+.profile-header-back-btn {
     color: var(--color-primary);
     padding: 0.5rem;
     background: transparent;
@@ -1205,11 +1187,11 @@
     transition: transform 0.2s;
 }
 
-.profile-header-menu-btn:hover {
+.profile-header-back-btn:hover {
     background-color: rgba(244, 122, 42, 0.1);
 }
 
-.profile-header-menu-btn:active {
+.profile-header-back-btn:active {
     transform: scale(0.95);
 }
 
@@ -1727,28 +1709,6 @@
     z-index: 50;
     background-color: rgba(255, 248, 246, 0.95);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-.memory-lane-menu-btn {
-    width: 2.5rem;
-    height: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 9999px;
-    background: transparent;
-    border: none;
-    color: var(--color-primary);
-    cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s;
-}
-
-.memory-lane-menu-btn:hover {
-    background-color: rgba(244, 122, 42, 0.1);
-}
-
-.memory-lane-menu-btn:active {
-    transform: scale(0.95);
 }
 
 .memory-lane-app-title {
