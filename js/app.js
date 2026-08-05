@@ -14,7 +14,6 @@ const MEMORIES = {
     yourViewCount: "2 memories shared",
     linkSlug: "sarah-grad...",
     isPublic: true,
-    // Real photos, carried over from the original hardcoded markup.
     ourView: [
       {
         large: true,
@@ -51,7 +50,17 @@ const MEMORIES = {
     yourViewCount: "No photos shared yet",
     linkSlug: "sunday-morning-treats",
     isPublic: true,
-    ourView: [],
+    ourView: [
+      {
+        large: true,
+        src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDjvvrzWXFNqanqkqkFSxs-mG1L0hlkR1QmLUQlzsBeKb5ehelUvqq_noOrGasHsz_S9JvMv34Fny2qu-knQYGHqVOJJd0wptZoaLQQ8JNar3uyC5DYbUdYAi6g-3UQeXgrPOCGxU8oCLl68gyvoxXd9TOIxFU5wNv_J5-w8lJh51Bizt-xgN9ZFNBBGnwHdXGGyml6ATuS1-yadBfBg-K4agRTDq4TYf5PKcu49aArdlgtRpvpUJhWTA",
+        alt: "Cinnamon Rolls",
+      },
+      {
+        src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCY6f7Ur5sK5IKzoGebFyH1ezcbuNa26UVeZ0aKS7sKgN1oa_-B-R2Wh0rsXfOF-rOeOWt-a4sXdyBh1ybOkN-fQyZaz9i4jTPS1HvCJ_z6OXhsE2utl4j733EgyJWVXlWB7w82rX5Y0LZiRll6q4FTe2MZlM2_j3a5-2XfTK2V1jq7DTw7xQUuHxaMQK_Saamtg5DOFxaNIJRgtnsIZAOBda2R6vcfY3jmb9GB0oeMAO9fW2aPf9Cyuw",
+        alt: "Icing",
+      },
+    ],
     yourView: [],
   },
   "valentines-special-bake": {
@@ -64,12 +73,72 @@ const MEMORIES = {
     yourViewCount: "No photos shared yet",
     linkSlug: "valentines-special-bake",
     isPublic: true,
-    ourView: [],
+    ourView: [
+      {
+        large: true,
+        src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCyxKoP0Vy_E_zrp7vJGPxj2oZkgT3SPioVs5U3aXGBzax-3dAO9UnF4GVXp2kKFA0JMtgAeQhaW5kUtDlTn5Tr4JhEsrcvK5Zp05HjO9gu6MrpGRY_915QuL3tL9aX4EFs4Zv2Dp4140kXDxSrSwJQ3hw4NHxYM_UAA6oXEvpZy7I-ydZdhv6QtSkkMNb_nDG2r_L2LNFYXgmQGWpsv4AlaRd2tvxCylDIBJO-S_Q1Ysrp8kXrIU8mHg",
+        alt: "Croissants",
+      },
+      {
+        src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCkAzcK2uoFFf5TeaU1Ca2F__gmz99MWqUJNMOGHb0aIlwTKTJ7_uNunFtDUdkSrK-q6Fe0nMx-WRxVHdjh4mO-28fO1IDHQp0XegZOaQFa7yrDvAQwxsl853UAYIF_7uufnyxaXYuPXAyAD4MumgSN3j4h5jY311mzUwT4qF1TGTu11ZTma_Joz0LBECCK-4RxsXeERYj5Dr-4n5_YYLg_MXdf-2MEeotWf2elJSBzBsRMCpyvKRrmhg",
+        alt: "Tart",
+      },
+    ],
     yourView: [],
   },
 };
 
 let currentMemoryId = null;
+
+function escapeHtml(value) {
+  return String(value).replace(
+    /[&<>"']/g,
+    (character) =>
+      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[
+      character
+      ],
+  );
+}
+
+function renderMemoryLane() {
+  const timeline = document.querySelector(
+    "#screen-memory-lane .memory-lane-timeline",
+  );
+  if (!timeline) return;
+
+  const memories = Object.entries(MEMORIES).sort(
+    ([, a], [, b]) => new Date(b.date) - new Date(a.date),
+  );
+
+  timeline.innerHTML = '<div class="memory-lane-timeline-line"></div>';
+  timeline.insertAdjacentHTML(
+    "beforeend",
+    memories
+      .map(([id, memory], index) => {
+        const photos = [
+          ...(memory.ourView || []),
+          ...(memory.yourView || []),
+        ].slice(0, 2);
+        const photoHtml = photos.length
+          ? `<div class="memory-lane-photo-collage${index % 2 ? " reverse-collage" : ""}">
+              <div class="memory-lane-main-photo"><img src="${escapeHtml(photos[0].src)}" alt="${escapeHtml(photos[0].alt || memory.title)}"></div>
+              ${photos[1] ? `<div class="memory-lane-secondary-photo"><img src="${escapeHtml(photos[1].src)}" alt="${escapeHtml(photos[1].alt || memory.title)}"></div>` : ""}
+              <div class="memory-lane-tape ${index % 2 ? "right-tape" : "top-tape"}"></div>
+            </div>`
+          : '<div class="memory-lane-photo-placeholder">Photos coming soon</div>';
+
+        return `<article class="memory-lane-entry fade-in-up" data-route="memory-detail" data-memory-id="${escapeHtml(id)}">
+          <div class="memory-lane-dot"></div>
+          <div class="memory-lane-card">
+            <span class="memory-lane-date">${escapeHtml(memory.date)}</span>
+            <h3 class="memory-lane-card-title">${escapeHtml(memory.title)}</h3>
+            ${photoHtml}
+          </div>
+        </article>`;
+      })
+      .join(""),
+  );
+}
 
 function renderOurView(items) {
   const grid = document.getElementById("memory-detail-bento-grid");
@@ -91,11 +160,11 @@ function renderYourView(items) {
   const grid = document.getElementById("memory-detail-customer-grid");
   const photoTiles = items.length
     ? items
-        .map(
-          (p) =>
-            `<div class="bento-item customer-photo-item"><img src="${p.src}" alt="${p.alt}"><div class="customer-photo-overlay"></div></div>`,
-        )
-        .join("")
+      .map(
+        (p) =>
+          `<div class="bento-item customer-photo-item"><img src="${p.src}" alt="${p.alt}"><div class="customer-photo-overlay"></div></div>`,
+      )
+      .join("")
     : `<div class="bento-item customer-photo-item is-placeholder"><span>No photos shared yet</span></div>`;
   grid.innerHTML =
     photoTiles +
@@ -183,6 +252,10 @@ document.addEventListener("DOMContentLoaded", () => {
         nav.classList.remove("active");
       }
     });
+    // Each page ships with a generic Home fallback in its markup. Reveal the
+    // nav only after the route-specific item has been selected, preventing a
+    // visible Home-to-current-page flash during navigation.
+    bottomNav.classList.add("is-ready");
   }
 
   // Handle specific page inits based on URL parameters
@@ -480,15 +553,22 @@ function initEditProfileScreen() {
 function initMemoryLaneScreen() {
   const memoryLaneScreen = document.getElementById("screen-memory-lane");
   if (memoryLaneScreen) {
+    renderMemoryLane();
+
     // Empty state toggle logic
     const emptyState = document.getElementById("memory-lane-empty-state");
     const timeline = memoryLaneScreen.querySelector(".memory-lane-timeline");
+    const loader = memoryLaneScreen.querySelector(".memory-lane-loader");
+    const hasMemories = Object.keys(MEMORIES).length > 0;
 
-    if (Object.keys(MEMORIES).length === 0) {
+    memoryLaneScreen.classList.toggle("memory-lane-is-empty", !hasMemories);
+    if (!hasMemories) {
       if (timeline) timeline.style.display = "none";
-      if (emptyState) emptyState.style.display = "block";
+      if (loader) loader.style.display = "none";
+      if (emptyState) emptyState.style.display = "flex";
     } else {
       if (timeline) timeline.style.display = "block";
+      if (loader) loader.style.display = "flex";
       if (emptyState) emptyState.style.display = "none";
     }
 
@@ -618,7 +698,7 @@ function initShareMemoryScreen() {
   if (copyBtn) {
     copyBtn.addEventListener("click", () => {
       const url = document.querySelector(".share-link-url").textContent;
-      navigator.clipboard?.writeText(url).catch(() => {});
+      navigator.clipboard?.writeText(url).catch(() => { });
       const label = copyBtn.querySelector(".share-copy-label");
       const orig = label.textContent;
       label.textContent = "COPIED!";

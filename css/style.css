@@ -1133,11 +1133,18 @@
   border-top-right-radius: 0.5rem;
 }
 
+.app-bottom-nav:not(.is-ready) {
+  visibility: hidden;
+}
+
 .nav-item {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 3.5rem;
+  padding: 0.25rem 1rem;
   text-decoration: none;
   color: var(--color-on-surface-variant);
   transition:
@@ -1151,13 +1158,9 @@
 
 .nav-item.active {
   background-color: var(--color-primary-container);
-  color: white;
-  /* Equivalent to text-on-primary-container in this theme typically? The original says text-on-primary-container, I'll just use white to be safe or color-surface */
+  color: var(--color-on-primary);
   border-radius: 9999px;
-  padding: 0.25rem 1rem;
   transform: scale(0.95);
-  color: #fff;
-  /* fallback */
 }
 
 .nav-item-label {
@@ -1961,6 +1964,18 @@
   object-fit: cover;
 }
 
+.memory-lane-photo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 10rem;
+  margin-top: 1rem;
+  border: 2px dashed rgba(244, 122, 42, 0.35);
+  border-radius: 0.5rem;
+  color: var(--color-on-surface-variant);
+  font-size: 0.875rem;
+}
+
 .memory-lane-loader {
   padding: 2rem 0;
   display: flex;
@@ -2036,6 +2051,22 @@
 .empty-lane-screen {
   flex-direction: column;
   background-color: var(--color-surface);
+}
+
+#memory-lane-empty-state {
+  flex: 1;
+  width: 100%;
+  min-height: calc(100vh - 4rem);
+  padding: 6rem var(--spacing-safe-margin) 8rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.memory-lane-screen.memory-lane-is-empty .memory-lane-main,
+.memory-lane-screen.memory-lane-is-empty .memory-lane-fab {
+  display: none;
 }
 
 .empty-lane-header {
