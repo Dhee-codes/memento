@@ -1,205 +1,254 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+      name="viewport"
+    />
     <title>Memento</title>
     <!-- External Fonts and Icons -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Great+Vibes&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body class="app-body">
-
+  <body class="app-body">
     <!-- SCREEN: MEMORY DETAIL -->
     <div id="screen-memory-detail" class="app-screen memory-detail-screen">
-        <header class="memory-detail-header" id="memory-detail-header">
-            <button class="memory-detail-back-btn" data-route="memory-lane">
-                <span class="material-symbols-outlined">arrow_back</span>
-            </button>
-            <h1 class="memory-detail-title">Graduation Brunch</h1>
-            <div class="memory-detail-actions">
-                <button class="memory-detail-action-btn" data-route="edit-memory">
-                    <span class="material-symbols-outlined">edit</span>
-                </button>
-                <button class="memory-detail-action-btn js-open-share">
-                    <span class="material-symbols-outlined">ios_share</span>
-                </button>
+      <header class="memory-detail-header" id="memory-detail-header">
+        <button class="memory-detail-back-btn" data-route="memory-lane">
+          <span class="material-symbols-outlined">arrow_back</span>
+        </button>
+        <h1 class="memory-detail-title">Graduation Brunch</h1>
+        <div class="memory-detail-actions">
+          <button class="memory-detail-action-btn" data-route="edit-memory">
+            <span class="material-symbols-outlined">edit</span>
+          </button>
+          <button class="memory-detail-action-btn js-open-share">
+            <span class="material-symbols-outlined">ios_share</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="memory-detail-main">
+        <section class="memory-detail-intro">
+          <p class="memory-detail-quote">
+            "Celebrating Sarah's big day with the best pastries in town."
+          </p>
+          <div class="memory-detail-tags">
+            <span class="memory-detail-tag tag-tertiary">May 15, 2026</span>
+            <span class="memory-detail-tag tag-secondary"
+              >Family Celebration</span
+            >
+          </div>
+        </section>
+
+        <section class="memory-detail-order-card">
+          <div class="memory-detail-order-icon">
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >shopping_bag</span
+            >
+          </div>
+          <div class="memory-detail-order-info">
+            <h3 class="memory-detail-order-title">The Celebration Bundle</h3>
+            <p class="memory-detail-order-desc">
+              12 Assorted Croissants, 6 Pain au Chocolat, and a customized
+              Graduation Tart.
+            </p>
+          </div>
+        </section>
+
+        <section class="memory-detail-photos-section">
+          <div class="memory-detail-section-header">
+            <h2 class="memory-detail-section-title">Our view</h2>
+            <span class="memory-detail-section-label">Bakery Favorites</span>
+          </div>
+          <div class="memory-detail-bento-grid" id="memory-detail-bento-grid">
+            <div class="bento-large bento-item">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuABZ1b1JQnA2DXtEtdSU4HMRPyhl1ZnEthOu7bmD-Qi4ULH-6hZCYgSMiZRRpd9dlfZjTjEkil1n6lUgSBKobvtpKu4YNG-kYLud4tg8yYOQR15PHgcLEkm47p5vWrZD1TyN5Y6Mzy2oDIHn61aiAnjRLuliWyXHMqUbdRsW89zdwA6_Dy3PTlKhCYXQ13YQIdbNiIs0bbopTVvpj0xOZ_DO4IPb7psQuJDp6tS9s1JyE33NGFFUKSnyQ"
+                alt="Croissants"
+              />
             </div>
-        </header>
+            <div class="bento-stack">
+              <div class="bento-item">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkAzcK2uoFFf5TeaU1Ca2F__gmz99MWqUJNMOGHb0aIlwTKTJ7_uNunFtDUdkSrK-q6Fe0nMx-WRxVHdjh4mO-28fO1IDHQp0XegZOaQFa7yrDvAQwxsl853UAYIF_7uufnyxaXYuPXAyAD4MumgSN3j4h5jY311mzUwT4qF1TGTu11ZTma_Joz0LBECCK-4RxsXeERYj5Dr-4n5_YYLg_MXdf-2MEeotWf2elJSBzBsRMCpyvKRrmhg"
+                  alt="Tart"
+                />
+              </div>
+              <div class="bento-item">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMvvhpYZJEzks-moF1JLtHI8RCttyOQ6wGO3hRetjsiesLN2nPYiI-JU_RHx_VbtcKDyUJ_UzBerVLKmFMnUr4zg4WJ_8A-DXsaSeWiuOfs2IwlMre36spwPmvJjthk799yZr5cdnTX7awqFKX_wdzP3hxwNajAHCYDryZv-_7NgpysZTkqg1kEgaDbd2olt9qdPx_IWltv9dNypJfjuB3EhpCrDC5wmwvExvtenH0S6pbul1HUjCQsg"
+                  alt="Pain au Chocolat"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
 
-        <main class="memory-detail-main">
-            <section class="memory-detail-intro">
-                <p class="memory-detail-quote">"Celebrating Sarah's big day with the best pastries in town."</p>
-                <div class="memory-detail-tags">
-                    <span class="memory-detail-tag tag-tertiary">May 15, 2026</span>
-                    <span class="memory-detail-tag tag-secondary">Family Celebration</span>
-                </div>
-            </section>
+        <section class="memory-detail-photos-section">
+          <div class="memory-detail-section-header">
+            <h2 class="memory-detail-section-title">Your view</h2>
+            <span
+              class="memory-detail-section-label"
+              id="memory-detail-your-view-count"
+              >2 memories shared</span
+            >
+          </div>
+          <div
+            class="memory-detail-customer-grid"
+            id="memory-detail-customer-grid"
+          >
+            <div class="bento-item customer-photo-item">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLhMnoWL_R0khhVSMSWz4T0T-5MBlkLuROWP_VSedexoPFZiRfrTikOGfv-y62bAakxgVLSAhhfpNtL27JMhIkx6XnxZSSknwsxMQ5HD53-nY1tfyG2NS7zL8Qe8x8fdMbekyC8eDf7FO1aQjIxkbHEP_VARuQ4eBe2e1YbBoVGv98S6iVuC3GDstbpq6IDKS6Q0_8ytEA_0PtsVEryay13m2bDuEXDtW9OAjpL2UH9SctA4ESj5NnUQ"
+                alt="Family photo"
+              />
+              <div class="customer-photo-overlay"></div>
+            </div>
+            <div class="bento-item customer-photo-item">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPCh1Hrc3syBEFCvzDc2YfataY7jf_MzaO1seZYmPBOq8jeVWNcqZWOrVOUCCxkxxYe1mR7shhA4bw0C6hUakYyaj4oVY0J1X-LOV0xOp9n4v244neR9evl1GkIAEF5QPFnEcLW3-PQX4Nw3sebAP1c1306AXOthJYQ1IHMyj71LvMKzeaWG1W5rqNBZ_o9n9qC_RDT-Kfx1rjWKfOzvuHxDFptobgpBABiBw1G9GESGRzfiequ6YNqw"
+                alt="Toast"
+              />
+              <div class="customer-photo-overlay"></div>
+            </div>
+            <button class="memory-detail-add-photo-btn">
+              <span class="material-symbols-outlined">add</span>
+              <span class="memory-detail-add-photo-label">Add your photos</span>
+            </button>
+          </div>
+        </section>
 
-            <section class="memory-detail-order-card">
-                <div class="memory-detail-order-icon">
-                    <span class="material-symbols-outlined"
-                        style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
-                </div>
-                <div class="memory-detail-order-info">
-                    <h3 class="memory-detail-order-title">The Celebration Bundle</h3>
-                    <p class="memory-detail-order-desc">12 Assorted Croissants, 6 Pain au Chocolat, and a customized
-                        Graduation Tart.</p>
-                </div>
-            </section>
-
-            <section class="memory-detail-photos-section">
-                <div class="memory-detail-section-header">
-                    <h2 class="memory-detail-section-title">Our view</h2>
-                    <span class="memory-detail-section-label">Bakery Favorites</span>
-                </div>
-                <div class="memory-detail-bento-grid" id="memory-detail-bento-grid">
-                    <div class="bento-large bento-item">
-                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuABZ1b1JQnA2DXtEtdSU4HMRPyhl1ZnEthOu7bmD-Qi4ULH-6hZCYgSMiZRRpd9dlfZjTjEkil1n6lUgSBKobvtpKu4YNG-kYLud4tg8yYOQR15PHgcLEkm47p5vWrZD1TyN5Y6Mzy2oDIHn61aiAnjRLuliWyXHMqUbdRsW89zdwA6_Dy3PTlKhCYXQ13YQIdbNiIs0bbopTVvpj0xOZ_DO4IPb7psQuJDp6tS9s1JyE33NGFFUKSnyQ"
-                            alt="Croissants">
-                    </div>
-                    <div class="bento-stack">
-                        <div class="bento-item">
-                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkAzcK2uoFFf5TeaU1Ca2F__gmz99MWqUJNMOGHb0aIlwTKTJ7_uNunFtDUdkSrK-q6Fe0nMx-WRxVHdjh4mO-28fO1IDHQp0XegZOaQFa7yrDvAQwxsl853UAYIF_7uufnyxaXYuPXAyAD4MumgSN3j4h5jY311mzUwT4qF1TGTu11ZTma_Joz0LBECCK-4RxsXeERYj5Dr-4n5_YYLg_MXdf-2MEeotWf2elJSBzBsRMCpyvKRrmhg"
-                                alt="Tart">
-                        </div>
-                        <div class="bento-item">
-                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMvvhpYZJEzks-moF1JLtHI8RCttyOQ6wGO3hRetjsiesLN2nPYiI-JU_RHx_VbtcKDyUJ_UzBerVLKmFMnUr4zg4WJ_8A-DXsaSeWiuOfs2IwlMre36spwPmvJjthk799yZr5cdnTX7awqFKX_wdzP3hxwNajAHCYDryZv-_7NgpysZTkqg1kEgaDbd2olt9qdPx_IWltv9dNypJfjuB3EhpCrDC5wmwvExvtenH0S6pbul1HUjCQsg"
-                                alt="Pain au Chocolat">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="memory-detail-photos-section">
-                <div class="memory-detail-section-header">
-                    <h2 class="memory-detail-section-title">Your view</h2>
-                    <span class="memory-detail-section-label" id="memory-detail-your-view-count">2 memories
-                        shared</span>
-                </div>
-                <div class="memory-detail-customer-grid" id="memory-detail-customer-grid">
-                    <div class="bento-item customer-photo-item">
-                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLhMnoWL_R0khhVSMSWz4T0T-5MBlkLuROWP_VSedexoPFZiRfrTikOGfv-y62bAakxgVLSAhhfpNtL27JMhIkx6XnxZSSknwsxMQ5HD53-nY1tfyG2NS7zL8Qe8x8fdMbekyC8eDf7FO1aQjIxkbHEP_VARuQ4eBe2e1YbBoVGv98S6iVuC3GDstbpq6IDKS6Q0_8ytEA_0PtsVEryay13m2bDuEXDtW9OAjpL2UH9SctA4ESj5NnUQ"
-                            alt="Family photo">
-                        <div class="customer-photo-overlay"></div>
-                    </div>
-                    <div class="bento-item customer-photo-item">
-                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPCh1Hrc3syBEFCvzDc2YfataY7jf_MzaO1seZYmPBOq8jeVWNcqZWOrVOUCCxkxxYe1mR7shhA4bw0C6hUakYyaj4oVY0J1X-LOV0xOp9n4v244neR9evl1GkIAEF5QPFnEcLW3-PQX4Nw3sebAP1c1306AXOthJYQ1IHMyj71LvMKzeaWG1W5rqNBZ_o9n9qC_RDT-Kfx1rjWKfOzvuHxDFptobgpBABiBw1G9GESGRzfiequ6YNqw"
-                            alt="Toast">
-                        <div class="customer-photo-overlay"></div>
-                    </div>
-                    <button class="memory-detail-add-photo-btn">
-                        <span class="material-symbols-outlined">add</span>
-                        <span class="memory-detail-add-photo-label">Add your photos</span>
-                    </button>
-                </div>
-            </section>
-
-            <section class="memory-detail-cta-section">
-                <p class="memory-detail-cta-label">Relive the moment</p>
-                <button class="memory-detail-relive-btn">
-                    Relive this order
-                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
-                </button>
-                <p class="memory-detail-relive-subtext">Order it again and relive the moment.</p>
-                <button class="memory-detail-share-btn js-open-share">Share memory</button>
-            </section>
-        </main>
+        <section class="memory-detail-cta-section">
+          <p class="memory-detail-cta-label">Relive the moment</p>
+          <button class="memory-detail-relive-btn">
+            Relive this order
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >chat</span
+            >
+          </button>
+          <p class="memory-detail-relive-subtext">
+            Order it again and relive the moment.
+          </p>
+          <button class="memory-detail-share-btn js-open-share">
+            Share memory
+          </button>
+        </section>
+      </main>
     </div>
 
     <!-- Share Sheet Modal Overlay -->
     <div class="share-modal-backdrop" id="share-modal-backdrop"></div>
     <div class="share-sheet" id="share-sheet">
-        <div class="share-sheet-handle-bar">
-            <div class="share-sheet-handle"></div>
+      <div class="share-sheet-handle-bar">
+        <div class="share-sheet-handle"></div>
+      </div>
+      <div class="share-sheet-content">
+        <div class="share-sheet-header">
+          <h3 class="share-sheet-title">Share Memory</h3>
+          <button class="share-sheet-close-btn" id="share-sheet-close">
+            <span class="material-symbols-outlined">close</span>
+          </button>
         </div>
-        <div class="share-sheet-content">
-            <div class="share-sheet-header">
-                <h3 class="share-sheet-title">Share Memory</h3>
-                <button class="share-sheet-close-btn" id="share-sheet-close">
-                    <span class="material-symbols-outlined">close</span>
-                </button>
-            </div>
 
-            <div class="share-toggle-row">
-                <div class="share-toggle-text">
-                    <p class="share-toggle-title">Make this memory public</p>
-                    <p class="share-toggle-subtitle">Anyone with the link can view this memory.</p>
-                </div>
-                <label class="share-toggle-switch">
-                    <input type="checkbox" checked>
-                    <span class="share-toggle-track"></span>
-                </label>
-            </div>
+        <div class="share-toggle-row">
+          <div class="share-toggle-text">
+            <p class="share-toggle-title">Make this memory public</p>
+            <p class="share-toggle-subtitle">
+              Anyone with the link can view this memory.
+            </p>
+          </div>
+          <label class="share-toggle-switch">
+            <input type="checkbox" checked />
+            <span class="share-toggle-track"></span>
+          </label>
+        </div>
 
-            <div class="share-link-section">
-                <p class="share-link-label">Memory Link</p>
-                <div class="share-link-row">
-                    <span class="material-symbols-outlined share-link-icon">link</span>
-                    <span class="share-link-url">memento.app/s/sarah-grad...</span>
-                    <button class="share-copy-btn">
-                        <span class="share-copy-label">COPY</span>
-                        <span class="material-symbols-outlined">content_copy</span>
-                    </button>
-                </div>
-            </div>
-
-            <button class="share-main-btn">
-                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">ios_share</span>
-                Share via...
+        <div class="share-link-section">
+          <p class="share-link-label">Memory Link</p>
+          <div class="share-link-row">
+            <span class="material-symbols-outlined share-link-icon">link</span>
+            <span class="share-link-url">memento.app/s/sarah-grad...</span>
+            <button class="share-copy-btn">
+              <span class="share-copy-label">COPY</span>
+              <span class="material-symbols-outlined">content_copy</span>
             </button>
-
-            <div class="share-socials">
-                <div class="share-social-item">
-                    <div class="share-social-icon"><span class="material-symbols-outlined">chat</span></div>
-                    <span class="share-social-label">Messages</span>
-                </div>
-                <div class="share-social-item">
-                    <div class="share-social-icon"><span class="material-symbols-outlined">mail</span></div>
-                    <span class="share-social-label">Mail</span>
-                </div>
-                <div class="share-social-item">
-                    <div class="share-social-icon"><span class="material-symbols-outlined">alternate_email</span>
-                    </div>
-                    <span class="share-social-label">Threads</span>
-                </div>
-                <div class="share-social-item">
-                    <div class="share-social-icon"><span class="material-symbols-outlined">more_horiz</span></div>
-                    <span class="share-social-label">More</span>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <button class="share-main-btn">
+          <span
+            class="material-symbols-outlined"
+            style="font-variation-settings: &quot;FILL&quot; 1"
+            >ios_share</span
+          >
+          Share via...
+        </button>
+
+        <div class="share-socials">
+          <div class="share-social-item">
+            <div class="share-social-icon">
+              <span class="material-symbols-outlined">chat</span>
+            </div>
+            <span class="share-social-label">Messages</span>
+          </div>
+          <div class="share-social-item">
+            <div class="share-social-icon">
+              <span class="material-symbols-outlined">mail</span>
+            </div>
+            <span class="share-social-label">Mail</span>
+          </div>
+          <div class="share-social-item">
+            <div class="share-social-icon">
+              <span class="material-symbols-outlined">alternate_email</span>
+            </div>
+            <span class="share-social-label">Threads</span>
+          </div>
+          <div class="share-social-item">
+            <div class="share-social-icon">
+              <span class="material-symbols-outlined">more_horiz</span>
+            </div>
+            <span class="share-social-label">More</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Shared Bottom Navigation Shell -->
     <nav class="app-bottom-nav" id="app-bottom-nav">
-        <a class="nav-item active" href="#" data-route="home">
-            <span class="material-symbols-outlined">home</span>
-            <span class="nav-item-label">Home</span>
-        </a>
-        <a class="nav-item" href="#" data-route="memory-lane">
-            <span class="material-symbols-outlined">auto_stories</span>
-            <span class="nav-item-label">Memories</span>
-        </a>
-        <a class="nav-item" href="#">
-            <span class="material-symbols-outlined">shopping_bag</span>
-            <span class="nav-item-label">Order</span>
-        </a>
-        <a class="nav-item" href="#" data-route="profile">
-            <span class="material-symbols-outlined">person</span>
-            <span class="nav-item-label">Profile</span>
-        </a>
+      <a class="nav-item active" href="#" data-route="home">
+        <span class="material-symbols-outlined">home</span>
+        <span class="nav-item-label">Home</span>
+      </a>
+      <a class="nav-item" href="#" data-route="memory-lane">
+        <span class="material-symbols-outlined">auto_stories</span>
+        <span class="nav-item-label">Memories</span>
+      </a>
+      <a class="nav-item" href="#">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        <span class="nav-item-label">Order</span>
+      </a>
+      <a class="nav-item" href="#" data-route="profile">
+        <span class="material-symbols-outlined">person</span>
+        <span class="nav-item-label">Profile</span>
+      </a>
     </nav>
 
     <!-- Main Application Script -->
     <script src="js/app.js"></script>
-</body>
-
+  </body>
 </html>

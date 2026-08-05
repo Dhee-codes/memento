@@ -1,244 +1,297 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+      name="viewport"
+    />
     <title>Memento</title>
     <!-- External Fonts and Icons -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Great+Vibes&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body class="app-body">
-
+  <body class="app-body">
     <!-- SCREEN: MEMORY LANE -->
     <div id="screen-memory-lane" class="app-screen memory-lane-screen">
-        <header class="memory-lane-header">
-            <h1 class="memory-lane-app-title">Memento</h1>
-            <div class="memory-lane-avatar-small">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeBd4EZvTzQ2Zkp1vz0AkWpNuBUbtrBrvYb8v7mFt_gJZZTKBZLBsq9j1cHGrQujfzOnE_pysCiKbkQ8kHUy5sBdpvNMdjExt4ZnIS3MomKFAxIY11ZjWmsuVO0u1y1RxsFLSs-kuMcKh6DQKQaAuMFZDwCshN8L65EDIAyyy0-UaCjtwpJ4l34v00l4AAiW_xj3p4mmKjr4oULKM1cYeAW7ZZ52SjVOUdha1o6S9-tufAFW9wO4AIwg"
-                    alt="Avatar">
-            </div>
-        </header>
+      <header class="memory-lane-header">
+        <h1 class="memory-lane-app-title">Memento</h1>
+        <div class="memory-lane-avatar-small">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeBd4EZvTzQ2Zkp1vz0AkWpNuBUbtrBrvYb8v7mFt_gJZZTKBZLBsq9j1cHGrQujfzOnE_pysCiKbkQ8kHUy5sBdpvNMdjExt4ZnIS3MomKFAxIY11ZjWmsuVO0u1y1RxsFLSs-kuMcKh6DQKQaAuMFZDwCshN8L65EDIAyyy0-UaCjtwpJ4l34v00l4AAiW_xj3p4mmKjr4oULKM1cYeAW7ZZ52SjVOUdha1o6S9-tufAFW9wO4AIwg"
+            alt="Avatar"
+          />
+        </div>
+      </header>
 
-        <main class="memory-lane-main">
-            <section class="memory-lane-title-section">
-                <h2 class="memory-lane-title">Memory Lane</h2>
-                <p class="memory-lane-subtitle">Every moment, in order.</p>
-            </section>
+      <main class="memory-lane-main">
+        <section class="memory-lane-title-section">
+          <h2 class="memory-lane-title">Memory Lane</h2>
+          <p class="memory-lane-subtitle">Every moment, in order.</p>
+        </section>
 
-            <div class="memory-lane-timeline">
-                <div class="memory-lane-timeline-line"></div>
+        <div class="memory-lane-timeline">
+          <div class="memory-lane-timeline-line"></div>
 
-                <!-- Timeline Entry 1 -->
-                <article class="memory-lane-entry fade-in-up" data-route="memory-detail"
-                    data-memory-id="graduation-brunch">
-                    <div class="memory-lane-dot"></div>
-                    <div class="memory-lane-card">
-                        <span class="memory-lane-date">March 2, 2026</span>
-                        <h3 class="memory-lane-card-title">Graduation Brunch</h3>
+          <!-- Timeline Entry 1 -->
+          <article
+            class="memory-lane-entry fade-in-up"
+            data-route="memory-detail"
+            data-memory-id="graduation-brunch"
+          >
+            <div class="memory-lane-dot"></div>
+            <div class="memory-lane-card">
+              <span class="memory-lane-date">March 2, 2026</span>
+              <h3 class="memory-lane-card-title">Graduation Brunch</h3>
 
-                        <div class="memory-lane-photo-collage">
-                            <div class="memory-lane-main-photo">
-                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDry_s0U2tLnMeoWSSw7Jyecubi-zR_hFSL8qN2fCp3IKaygAhkRGgCMXqe02ruW4VYRJtidw78KZf70eK0d17tV6hondZ99OjRK5m8Zqt2G4LKmrznNDwxHGxSZbEodgtdkQM510fj0kfRTnxVRVYoTQrXxLvcgwQqvPIdowWjezi6Yp72MDfdw1njpjD4ME6Lq_M2Dzfhp_dsDx4a8Wc7LZUbzo2rNssdcYaLQ4uax3tXvkSKGXcsTw"
-                                    alt="Graduation Brunch">
-                            </div>
-                            <div class="memory-lane-secondary-photo">
-                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm1BBfxMrx84F1b_HV3m3FPSuAhdL7g_3qPy-zxp6ZT4gmL7XmQzb539CqwO00eKudVa9Ickg1JJyKR44SzrDXVA4gEHPpFBTzIL7kkWNqRSctoqOoT5Y6quDkXKx_Z5bO_MEr-8kujXf5QzEyO7o6x1-ndADj88FHW1HM5KdCX8PFzxZsCP4-q4hvhtor0RnswcFurEsQYF1fa-HmHcA3RKHbeyhr1kcocvICkGASc3MpHfg0vM0ppw"
-                                    alt="Toast">
-                            </div>
-                            <div class="memory-lane-tape top-tape"></div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Timeline Entry 2 -->
-                <article class="memory-lane-entry fade-in-up" data-route="memory-detail"
-                    data-memory-id="sunday-morning-treats">
-                    <div class="memory-lane-dot"></div>
-                    <div class="memory-lane-card">
-                        <span class="memory-lane-date">February 24, 2026</span>
-                        <h3 class="memory-lane-card-title">Sunday Morning Treats</h3>
-
-                        <div class="memory-lane-photo-collage reverse-collage">
-                            <div class="memory-lane-main-photo">
-                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjvvrzWXFNqanqkqkFSxs-mG1L0hlkR1QmLUQlzsBeKb5ehelUvqq_noOrGasHsz_S9JvMv34Fny2qu-knQYGHqVOJJd0wptZoaLQQ8JNar3uyC5DYbUdYAi6g-3UQeXgrPOCGxU8oCLl68gyvoxXd9TOIxFU5wNv_J5-w8lJh51Bizt-xgN9ZFNBBGnwHdXGGyml6ATuS1-yadBfBg-K4agRTDq4TYf5PKcu49aArdlgtRpvpUJhWTA"
-                                    alt="Cinnamon Rolls">
-                            </div>
-                            <div class="memory-lane-secondary-photo">
-                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY6f7Ur5sK5IKzoGebFyH1ezcbuNa26UVeZ0aKS7sKgN1oa_-B-R2Wh0rsXfOF-rOeOWt-a4sXdyBh1ybOkN-fQyZaz9i4jTPS1HvCJ_z6OXhsE2utl4j733EgyJWVXlWB7w82rX5Y0LZiRll6q4FTe2MZlM2_j3a5-2XfTK2V1jq7DTw7xQUuHxaMQK_Saamtg5DOFxaNIJRgtnsIZAOBda2R6vcfY3jmb9GB0oeMAO9fW2aPf9Cyuw"
-                                    alt="Icing">
-                            </div>
-                            <div class="memory-lane-tape right-tape"></div>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Timeline Entry 3 -->
-                <article class="memory-lane-entry fade-in-up" data-route="memory-detail"
-                    data-memory-id="valentines-special-bake">
-                    <div class="memory-lane-dot"></div>
-                    <div class="memory-lane-card">
-                        <span class="memory-lane-date">February 14, 2026</span>
-                        <h3 class="memory-lane-card-title">Valentine's Special Bake</h3>
-
-                        <div class="memory-lane-photo-grid">
-                            <div class="memory-lane-grid-photo">
-                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyxKoP0Vy_E_zrp7vJGPxj2oZkgT3SPioVs5U3aXGBzax-3dAO9UnF4GVXp2kKFA0JMtgAeQhaW5kUtDlTn5Tr4JhEsrcvK5Zp05HjO9gu6MrpGRY_915QuL3tL9aX4EFs4Zv2Dp4140kXDxSrSwJQ3hw4NHxYM_UAA6oXEvpZy7I-ydZdhv6QtSkkMNb_nDG2r_L2LNFYXgmQGWpsv4AlaRd2tvxCylDIBJO-S_Q1Ysrp8kXrIU8mHg"
-                                    alt="Macarons">
-                            </div>
-                            <div class="memory-lane-grid-photo">
-                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6mXYvRCF9YR4cKBiUus9ZusAg14Bv04cBLN-Q734lTn--1foMIqHm0jbwsSWyFYq8HLcdAqEefk5vEIIl-SL24m_uDTpd4TzEbIfZ4NsFcgk9qYOTxhYdXIT5TxAJjoKoIjrttA8OuFTFHMitrY3BZtuv2FaVfi_wKLO57Z8lunwFNy_Iw_or0lONhYBemmPVvAgdCzJI1i0_vEI4d1yJoTOEdbHChAiGBPCz8QK55sqCB4WwQPZZFw"
-                                    alt="Chocolates">
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-
-            <div class="memory-lane-loader">
-                <div class="spinner"></div>
-                <p>Reliving more moments...</p>
-            </div>
-        </main>
-
-        <div id="memory-lane-empty-state" style="display: none;">
-            <div class="empty-lane-container fade-in-up">
-                <div class="empty-lane-illustration">
-                    <div class="empty-lane-glow"></div>
-                    <div class="empty-lane-image-wrapper">
-                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUcfBYKmx1OaeJQGcUA_vC8LJ0JwBZY1y1-ErKMq5e9xweay-6OHj3zrQoWvqZoHKzTdncNrO9TUA8pXLxEFTnFJ_KuQ8GWnBMxEgPzZHpRIJzlHk0TtiH7G9WSJEsnSOPb7hPc-oU5Wpc6jv1NGG2sIoxLXDsp-wtZbTXcMWPTuyV3huLxE3pucG_bKHsGlfTMp3DB3ie9WOkhVNVzomWmz1lN3KdoCSROfRNbKd-7CnaqfaXZf5TLZEfRECRaeR068Q"
-                            alt="Mark">
-                        <div class="empty-lane-deco empty-lane-deco-1">
-                            <span class="material-symbols-outlined"
-                                style="font-variation-settings: 'FILL' 1;">star</span>
-                        </div>
-                        <div class="empty-lane-deco empty-lane-deco-2">
-                            <span class="material-symbols-outlined"
-                                style="font-variation-settings: 'FILL' 1;">restaurant</span>
-                        </div>
-                    </div>
+              <div class="memory-lane-photo-collage">
+                <div class="memory-lane-main-photo">
+                  <img
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDry_s0U2tLnMeoWSSw7Jyecubi-zR_hFSL8qN2fCp3IKaygAhkRGgCMXqe02ruW4VYRJtidw78KZf70eK0d17tV6hondZ99OjRK5m8Zqt2G4LKmrznNDwxHGxSZbEodgtdkQM510fj0kfRTnxVRVYoTQrXxLvcgwQqvPIdowWjezi6Yp72MDfdw1njpjD4ME6Lq_M2Dzfhp_dsDx4a8Wc7LZUbzo2rNssdcYaLQ4uax3tXvkSKGXcsTw"
+                    alt="Graduation Brunch"
+                  />
                 </div>
-
-                <div class="empty-lane-text-content">
-                    <h2 class="empty-lane-heading">No memories yet</h2>
-                    <p class="empty-lane-body">Your culinary scrapbook is waiting. Place an order to start your first
-                        memory.</p>
+                <div class="memory-lane-secondary-photo">
+                  <img
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm1BBfxMrx84F1b_HV3m3FPSuAhdL7g_3qPy-zxp6ZT4gmL7XmQzb539CqwO00eKudVa9Ickg1JJyKR44SzrDXVA4gEHPpFBTzIL7kkWNqRSctoqOoT5Y6quDkXKx_Z5bO_MEr-8kujXf5QzEyO7o6x1-ndADj88FHW1HM5KdCX8PFzxZsCP4-q4hvhtor0RnswcFurEsQYF1fa-HmHcA3RKHbeyhr1kcocvICkGASc3MpHfg0vM0ppw"
+                    alt="Toast"
+                  />
                 </div>
+                <div class="memory-lane-tape top-tape"></div>
+              </div>
+            </div>
+          </article>
 
-                <div class="empty-lane-cta">
-                    <button class="empty-lane-btn-primary">Order now</button>
-                    <button class="empty-lane-btn-secondary" data-route="memory-lane">
-                        <span class="material-symbols-outlined">auto_stories</span>
-                        Browse Sample Scrapbook
-                    </button>
+          <!-- Timeline Entry 2 -->
+          <article
+            class="memory-lane-entry fade-in-up"
+            data-route="memory-detail"
+            data-memory-id="sunday-morning-treats"
+          >
+            <div class="memory-lane-dot"></div>
+            <div class="memory-lane-card">
+              <span class="memory-lane-date">February 24, 2026</span>
+              <h3 class="memory-lane-card-title">Sunday Morning Treats</h3>
+
+              <div class="memory-lane-photo-collage reverse-collage">
+                <div class="memory-lane-main-photo">
+                  <img
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjvvrzWXFNqanqkqkFSxs-mG1L0hlkR1QmLUQlzsBeKb5ehelUvqq_noOrGasHsz_S9JvMv34Fny2qu-knQYGHqVOJJd0wptZoaLQQ8JNar3uyC5DYbUdYAi6g-3UQeXgrPOCGxU8oCLl68gyvoxXd9TOIxFU5wNv_J5-w8lJh51Bizt-xgN9ZFNBBGnwHdXGGyml6ATuS1-yadBfBg-K4agRTDq4TYf5PKcu49aArdlgtRpvpUJhWTA"
+                    alt="Cinnamon Rolls"
+                  />
                 </div>
+                <div class="memory-lane-secondary-photo">
+                  <img
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY6f7Ur5sK5IKzoGebFyH1ezcbuNa26UVeZ0aKS7sKgN1oa_-B-R2Wh0rsXfOF-rOeOWt-a4sXdyBh1ybOkN-fQyZaz9i4jTPS1HvCJ_z6OXhsE2utl4j733EgyJWVXlWB7w82rX5Y0LZiRll6q4FTe2MZlM2_j3a5-2XfTK2V1jq7DTw7xQUuHxaMQK_Saamtg5DOFxaNIJRgtnsIZAOBda2R6vcfY3jmb9GB0oeMAO9fW2aPf9Cyuw"
+                    alt="Icing"
+                  />
+                </div>
+                <div class="memory-lane-tape right-tape"></div>
+              </div>
             </div>
+          </article>
 
-            <div class="empty-lane-background">
-                <div class="empty-lane-bg-shape shape-1"></div>
-                <div class="empty-lane-bg-shape shape-2"></div>
-                <div class="empty-lane-bg-shape shape-3"></div>
+          <!-- Timeline Entry 3 -->
+          <article
+            class="memory-lane-entry fade-in-up"
+            data-route="memory-detail"
+            data-memory-id="valentines-special-bake"
+          >
+            <div class="memory-lane-dot"></div>
+            <div class="memory-lane-card">
+              <span class="memory-lane-date">February 14, 2026</span>
+              <h3 class="memory-lane-card-title">Valentine's Special Bake</h3>
+
+              <div class="memory-lane-photo-grid">
+                <div class="memory-lane-grid-photo">
+                  <img
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyxKoP0Vy_E_zrp7vJGPxj2oZkgT3SPioVs5U3aXGBzax-3dAO9UnF4GVXp2kKFA0JMtgAeQhaW5kUtDlTn5Tr4JhEsrcvK5Zp05HjO9gu6MrpGRY_915QuL3tL9aX4EFs4Zv2Dp4140kXDxSrSwJQ3hw4NHxYM_UAA6oXEvpZy7I-ydZdhv6QtSkkMNb_nDG2r_L2LNFYXgmQGWpsv4AlaRd2tvxCylDIBJO-S_Q1Ysrp8kXrIU8mHg"
+                    alt="Macarons"
+                  />
+                </div>
+                <div class="memory-lane-grid-photo">
+                  <img
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6mXYvRCF9YR4cKBiUus9ZusAg14Bv04cBLN-Q734lTn--1foMIqHm0jbwsSWyFYq8HLcdAqEefk5vEIIl-SL24m_uDTpd4TzEbIfZ4NsFcgk9qYOTxhYdXIT5TxAJjoKoIjrttA8OuFTFHMitrY3BZtuv2FaVfi_wKLO57Z8lunwFNy_Iw_or0lONhYBemmPVvAgdCzJI1i0_vEI4d1yJoTOEdbHChAiGBPCz8QK55sqCB4WwQPZZFw"
+                    alt="Chocolates"
+                  />
+                </div>
+              </div>
             </div>
+          </article>
         </div>
 
-        <button class="memory-lane-fab" disabled title="Add memory — not built yet">
-            <span class="material-symbols-outlined">add</span>
-        </button>
+        <div class="memory-lane-loader">
+          <div class="spinner"></div>
+          <p>Reliving more moments...</p>
+        </div>
+      </main>
+
+      <div id="memory-lane-empty-state" style="display: none">
+        <div class="empty-lane-container fade-in-up">
+          <div class="empty-lane-illustration">
+            <div class="empty-lane-glow"></div>
+            <div class="empty-lane-image-wrapper">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUcfBYKmx1OaeJQGcUA_vC8LJ0JwBZY1y1-ErKMq5e9xweay-6OHj3zrQoWvqZoHKzTdncNrO9TUA8pXLxEFTnFJ_KuQ8GWnBMxEgPzZHpRIJzlHk0TtiH7G9WSJEsnSOPb7hPc-oU5Wpc6jv1NGG2sIoxLXDsp-wtZbTXcMWPTuyV3huLxE3pucG_bKHsGlfTMp3DB3ie9WOkhVNVzomWmz1lN3KdoCSROfRNbKd-7CnaqfaXZf5TLZEfRECRaeR068Q"
+                alt="Mark"
+              />
+              <div class="empty-lane-deco empty-lane-deco-1">
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+              </div>
+              <div class="empty-lane-deco empty-lane-deco-2">
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >restaurant</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="empty-lane-text-content">
+            <h2 class="empty-lane-heading">No memories yet</h2>
+            <p class="empty-lane-body">
+              Your culinary scrapbook is waiting. Place an order to start your
+              first memory.
+            </p>
+          </div>
+
+          <div class="empty-lane-cta">
+            <button class="empty-lane-btn-primary">Order now</button>
+            <button class="empty-lane-btn-secondary" data-route="memory-lane">
+              <span class="material-symbols-outlined">auto_stories</span>
+              Browse Sample Scrapbook
+            </button>
+          </div>
+        </div>
+
+        <div class="empty-lane-background">
+          <div class="empty-lane-bg-shape shape-1"></div>
+          <div class="empty-lane-bg-shape shape-2"></div>
+          <div class="empty-lane-bg-shape shape-3"></div>
+        </div>
+      </div>
+
+      <button
+        class="memory-lane-fab"
+        disabled
+        title="Add memory — not built yet"
+      >
+        <span class="material-symbols-outlined">add</span>
+      </button>
     </div>
 
     <!-- Share Sheet Modal Overlay -->
     <div class="share-modal-backdrop" id="share-modal-backdrop"></div>
     <div class="share-sheet" id="share-sheet">
-        <div class="share-sheet-handle-bar">
-            <div class="share-sheet-handle"></div>
+      <div class="share-sheet-handle-bar">
+        <div class="share-sheet-handle"></div>
+      </div>
+      <div class="share-sheet-content">
+        <div class="share-sheet-header">
+          <h3 class="share-sheet-title">Share Memory</h3>
+          <button class="share-sheet-close-btn" id="share-sheet-close">
+            <span class="material-symbols-outlined">close</span>
+          </button>
         </div>
-        <div class="share-sheet-content">
-            <div class="share-sheet-header">
-                <h3 class="share-sheet-title">Share Memory</h3>
-                <button class="share-sheet-close-btn" id="share-sheet-close">
-                    <span class="material-symbols-outlined">close</span>
-                </button>
-            </div>
 
-            <div class="share-toggle-row">
-                <div class="share-toggle-text">
-                    <p class="share-toggle-title">Make this memory public</p>
-                    <p class="share-toggle-subtitle">Anyone with the link can view this memory.</p>
-                </div>
-                <label class="share-toggle-switch">
-                    <input type="checkbox" checked>
-                    <span class="share-toggle-track"></span>
-                </label>
-            </div>
+        <div class="share-toggle-row">
+          <div class="share-toggle-text">
+            <p class="share-toggle-title">Make this memory public</p>
+            <p class="share-toggle-subtitle">
+              Anyone with the link can view this memory.
+            </p>
+          </div>
+          <label class="share-toggle-switch">
+            <input type="checkbox" checked />
+            <span class="share-toggle-track"></span>
+          </label>
+        </div>
 
-            <div class="share-link-section">
-                <p class="share-link-label">Memory Link</p>
-                <div class="share-link-row">
-                    <span class="material-symbols-outlined share-link-icon">link</span>
-                    <span class="share-link-url">memento.app/s/sarah-grad...</span>
-                    <button class="share-copy-btn">
-                        <span class="share-copy-label">COPY</span>
-                        <span class="material-symbols-outlined">content_copy</span>
-                    </button>
-                </div>
-            </div>
-
-            <button class="share-main-btn">
-                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">ios_share</span>
-                Share via...
+        <div class="share-link-section">
+          <p class="share-link-label">Memory Link</p>
+          <div class="share-link-row">
+            <span class="material-symbols-outlined share-link-icon">link</span>
+            <span class="share-link-url">memento.app/s/sarah-grad...</span>
+            <button class="share-copy-btn">
+              <span class="share-copy-label">COPY</span>
+              <span class="material-symbols-outlined">content_copy</span>
             </button>
-
-            <div class="share-socials">
-                <div class="share-social-item">
-                    <div class="share-social-icon"><span class="material-symbols-outlined">chat</span></div>
-                    <span class="share-social-label">Messages</span>
-                </div>
-                <div class="share-social-item">
-                    <div class="share-social-icon"><span class="material-symbols-outlined">mail</span></div>
-                    <span class="share-social-label">Mail</span>
-                </div>
-                <div class="share-social-item">
-                    <div class="share-social-icon"><span class="material-symbols-outlined">alternate_email</span>
-                    </div>
-                    <span class="share-social-label">Threads</span>
-                </div>
-                <div class="share-social-item">
-                    <div class="share-social-icon"><span class="material-symbols-outlined">more_horiz</span></div>
-                    <span class="share-social-label">More</span>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <button class="share-main-btn">
+          <span
+            class="material-symbols-outlined"
+            style="font-variation-settings: &quot;FILL&quot; 1"
+            >ios_share</span
+          >
+          Share via...
+        </button>
+
+        <div class="share-socials">
+          <div class="share-social-item">
+            <div class="share-social-icon">
+              <span class="material-symbols-outlined">chat</span>
+            </div>
+            <span class="share-social-label">Messages</span>
+          </div>
+          <div class="share-social-item">
+            <div class="share-social-icon">
+              <span class="material-symbols-outlined">mail</span>
+            </div>
+            <span class="share-social-label">Mail</span>
+          </div>
+          <div class="share-social-item">
+            <div class="share-social-icon">
+              <span class="material-symbols-outlined">alternate_email</span>
+            </div>
+            <span class="share-social-label">Threads</span>
+          </div>
+          <div class="share-social-item">
+            <div class="share-social-icon">
+              <span class="material-symbols-outlined">more_horiz</span>
+            </div>
+            <span class="share-social-label">More</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Shared Bottom Navigation Shell -->
     <nav class="app-bottom-nav" id="app-bottom-nav">
-        <a class="nav-item active" href="#" data-route="home">
-            <span class="material-symbols-outlined">home</span>
-            <span class="nav-item-label">Home</span>
-        </a>
-        <a class="nav-item" href="#" data-route="memory-lane">
-            <span class="material-symbols-outlined">auto_stories</span>
-            <span class="nav-item-label">Memories</span>
-        </a>
-        <a class="nav-item" href="#">
-            <span class="material-symbols-outlined">shopping_bag</span>
-            <span class="nav-item-label">Order</span>
-        </a>
-        <a class="nav-item" href="#" data-route="profile">
-            <span class="material-symbols-outlined">person</span>
-            <span class="nav-item-label">Profile</span>
-        </a>
+      <a class="nav-item active" href="#" data-route="home">
+        <span class="material-symbols-outlined">home</span>
+        <span class="nav-item-label">Home</span>
+      </a>
+      <a class="nav-item" href="#" data-route="memory-lane">
+        <span class="material-symbols-outlined">auto_stories</span>
+        <span class="nav-item-label">Memories</span>
+      </a>
+      <a class="nav-item" href="#">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        <span class="nav-item-label">Order</span>
+      </a>
+      <a class="nav-item" href="#" data-route="profile">
+        <span class="material-symbols-outlined">person</span>
+        <span class="nav-item-label">Profile</span>
+      </a>
     </nav>
 
     <!-- Main Application Script -->
     <script src="js/app.js"></script>
-</body>
-
+  </body>
 </html>

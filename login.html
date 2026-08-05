@@ -1,92 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+      name="viewport"
+    />
     <title>Memento</title>
     <!-- External Fonts and Icons -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Great+Vibes&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body class="app-body">
-
+  <body class="app-body">
     <!-- SCREEN: LOGIN -->
     <div id="screen-login" class="app-screen login-screen">
-        <main class="login-container">
-            <!-- Top Logo Mark -->
-            <div class="login-logo-wrapper">
-                <img alt="Memento Logo Ring Mark" class="login-logo-img"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtyuv3hR4eEMjbXvtQ-2tcamg7bbGjE8GGZ_T9g7g7BcufPu_ThHHS9BpxBFuzkBQmG6J9gjo5GpCPjHQAT0hNbEx0BPqGzyfUnV9NUMpbyoAtLXM-KiqUitEBO894gugPMxwmKD5Cytlto1R4_fDe0B3M9i2Skw4mvhEgtgxdEYtOdttqFbmtg7Ahv26agL1BXmM64pJGMkqgVqSBaAtAcc_bgR7Hg5dwdnrbskeUEEkVcDuJztCfhpv3l_KdgBY5o4c">
+      <main class="login-container">
+        <!-- Top Logo Mark -->
+        <div class="login-logo-wrapper">
+          <img
+            alt="Memento Logo Ring Mark"
+            class="login-logo-img"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtyuv3hR4eEMjbXvtQ-2tcamg7bbGjE8GGZ_T9g7g7BcufPu_ThHHS9BpxBFuzkBQmG6J9gjo5GpCPjHQAT0hNbEx0BPqGzyfUnV9NUMpbyoAtLXM-KiqUitEBO894gugPMxwmKD5Cytlto1R4_fDe0B3M9i2Skw4mvhEgtgxdEYtOdttqFbmtg7Ahv26agL1BXmM64pJGMkqgVqSBaAtAcc_bgR7Hg5dwdnrbskeUEEkVcDuJztCfhpv3l_KdgBY5o4c"
+          />
+        </div>
+        <!-- Headline -->
+        <header class="login-header">
+          <h1 class="login-title">Welcome back,</h1>
+          <p class="login-subtitle">Your culinary scrapbooks are waiting.</p>
+        </header>
+        <!-- Form -->
+        <form class="login-form" id="login-form">
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address</label>
+            <div class="form-input-wrapper">
+              <input
+                class="form-input"
+                id="email"
+                placeholder="hello@example.com"
+                type="email"
+                required
+              />
             </div>
-            <!-- Headline -->
-            <header class="login-header">
-                <h1 class="login-title">Welcome back,</h1>
-                <p class="login-subtitle">Your culinary scrapbooks are waiting.</p>
-            </header>
-            <!-- Form -->
-            <form class="login-form" id="login-form">
-                <div class="form-group">
-                    <label class="form-label" for="email">Email Address</label>
-                    <div class="form-input-wrapper">
-                        <input class="form-input" id="email" placeholder="hello@example.com" type="email" required>
-                    </div>
-                </div>
-                <!-- Login Button -->
-                <button class="primary-button login-submit-btn" type="submit">
-                    <span class="login-submit-text">Log in</span>
-                    <span class="material-symbols-outlined login-submit-icon">arrow_forward</span>
-                </button>
-            </form>
-            <!-- Footer Actions -->
-            <footer class="login-footer">
-                <p class="login-footer-text">
-                    New to Memento?
-                    <button class="login-footer-link" data-route="join">Create an account</button>
-                </p>
-                <!-- Decorative Element -->
-                <div class="login-divider-wrapper">
-                    <div class="login-divider-line"></div>
-                    <div class="login-divider-icon-wrapper">
-                        <span class="material-symbols-outlined login-divider-icon">favorite</span>
-                    </div>
-                    <div class="login-divider-line"></div>
-                </div>
-                <p class="login-footer-security">
-                    Your memories are safely stored & encrypted
-                </p>
-            </footer>
-        </main>
+          </div>
+          <!-- Login Button -->
+          <button class="primary-button login-submit-btn" type="submit">
+            <span class="login-submit-text">Log in</span>
+            <span class="material-symbols-outlined login-submit-icon"
+              >arrow_forward</span
+            >
+          </button>
+        </form>
+        <!-- Footer Actions -->
+        <footer class="login-footer">
+          <p class="login-footer-text">
+            New to Memento?
+            <button class="login-footer-link" data-route="join">
+              Create an account
+            </button>
+          </p>
+          <!-- Decorative Element -->
+          <div class="login-divider-wrapper">
+            <div class="login-divider-line"></div>
+            <div class="login-divider-icon-wrapper">
+              <span class="material-symbols-outlined login-divider-icon"
+                >favorite</span
+              >
+            </div>
+            <div class="login-divider-line"></div>
+          </div>
+          <p class="login-footer-security">
+            Your memories are safely stored & encrypted
+          </p>
+        </footer>
+      </main>
     </div>
 
     <!-- Shared Bottom Navigation Shell -->
     <nav class="app-bottom-nav hidden" id="app-bottom-nav">
-        <a class="nav-item active" href="#" data-route="home">
-            <span class="material-symbols-outlined">home</span>
-            <span class="nav-item-label">Home</span>
-        </a>
-        <a class="nav-item" href="#" data-route="memory-lane">
-            <span class="material-symbols-outlined">auto_stories</span>
-            <span class="nav-item-label">Memories</span>
-        </a>
-        <a class="nav-item" href="#">
-            <span class="material-symbols-outlined">shopping_bag</span>
-            <span class="nav-item-label">Order</span>
-        </a>
-        <a class="nav-item" href="#" data-route="profile">
-            <span class="material-symbols-outlined">person</span>
-            <span class="nav-item-label">Profile</span>
-        </a>
+      <a class="nav-item active" href="#" data-route="home">
+        <span class="material-symbols-outlined">home</span>
+        <span class="nav-item-label">Home</span>
+      </a>
+      <a class="nav-item" href="#" data-route="memory-lane">
+        <span class="material-symbols-outlined">auto_stories</span>
+        <span class="nav-item-label">Memories</span>
+      </a>
+      <a class="nav-item" href="#">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        <span class="nav-item-label">Order</span>
+      </a>
+      <a class="nav-item" href="#" data-route="profile">
+        <span class="material-symbols-outlined">person</span>
+        <span class="nav-item-label">Profile</span>
+      </a>
     </nav>
 
     <!-- Main Application Script -->
     <script src="js/app.js"></script>
-</body>
-
+  </body>
 </html>

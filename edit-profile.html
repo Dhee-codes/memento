@@ -1,193 +1,255 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+      name="viewport"
+    />
     <title>Memento</title>
     <!-- External Fonts and Icons -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Great+Vibes&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body class="app-body">
-
+  <body class="app-body">
     <!-- SCREEN: EDIT PROFILE -->
     <div id="screen-edit-profile" class="app-screen edit-profile-screen">
-        <header class="edit-profile-header">
-            <button class="edit-profile-back-btn material-symbols-outlined" data-route="profile">arrow_back</button>
-            <h1 class="edit-profile-title">Edit profile</h1>
-            <button class="edit-profile-save-btn" id="edit-profile-save-btn" disabled>Save</button>
-        </header>
-        <main class="edit-profile-main">
-            <section class="edit-profile-avatar-section">
-                <div class="edit-profile-avatar-wrapper">
-                    <div class="edit-profile-avatar">
-                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6rQYyMl_MxdvLzOqb-3siCrysnpMOAhGFqDJZkZueza4ZMw_Bh-u98kIDz-5HxnD5BZ6hsM1r5VcmATwcG4sWbEqxl9IIduafnpOytr5Wb11FCAd4fDH8WhUy-YPgnm0LOihbRJ-GUms2iMmas6dcwZ_ajdn-lNqSVlesvjeZWiqG3bLwV1TU9idPO3iBBXNF1ZZVMeRL8w0Rb6i_SzfqprThVjWhGRq0YTTYI-MoKyGo4MR7Y9BqDA"
-                            alt="User Avatar">
-                    </div>
-                    <div class="edit-profile-avatar-overlay">
-                        <span class="material-symbols-outlined edit-profile-overlay-icon">photo_camera</span>
-                    </div>
-                    <div class="edit-profile-avatar-edit-icon">
-                        <span class="material-symbols-outlined">edit</span>
-                    </div>
-                </div>
-                <p class="edit-profile-avatar-hint">TAP TO CHANGE PHOTO</p>
-            </section>
+      <header class="edit-profile-header">
+        <button
+          class="edit-profile-back-btn material-symbols-outlined"
+          data-route="profile"
+        >
+          arrow_back
+        </button>
+        <h1 class="edit-profile-title">Edit profile</h1>
+        <button
+          class="edit-profile-save-btn"
+          id="edit-profile-save-btn"
+          disabled
+        >
+          Save
+        </button>
+      </header>
+      <main class="edit-profile-main">
+        <section class="edit-profile-avatar-section">
+          <div class="edit-profile-avatar-wrapper">
+            <div class="edit-profile-avatar">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6rQYyMl_MxdvLzOqb-3siCrysnpMOAhGFqDJZkZueza4ZMw_Bh-u98kIDz-5HxnD5BZ6hsM1r5VcmATwcG4sWbEqxl9IIduafnpOytr5Wb11FCAd4fDH8WhUy-YPgnm0LOihbRJ-GUms2iMmas6dcwZ_ajdn-lNqSVlesvjeZWiqG3bLwV1TU9idPO3iBBXNF1ZZVMeRL8w0Rb6i_SzfqprThVjWhGRq0YTTYI-MoKyGo4MR7Y9BqDA"
+                alt="User Avatar"
+              />
+            </div>
+            <div class="edit-profile-avatar-overlay">
+              <span class="material-symbols-outlined edit-profile-overlay-icon"
+                >photo_camera</span
+              >
+            </div>
+            <div class="edit-profile-avatar-edit-icon">
+              <span class="material-symbols-outlined">edit</span>
+            </div>
+          </div>
+          <p class="edit-profile-avatar-hint">TAP TO CHANGE PHOTO</p>
+        </section>
 
-            <form class="edit-profile-form">
-                <div class="edit-profile-input-group">
-                    <label class="edit-profile-label" for="full_name">Full Name</label>
-                    <div class="edit-profile-input-wrapper">
-                        <input class="edit-profile-input" id="full_name" placeholder="Your name" type="text"
-                            value="Sarah Doe">
-                        <span class="material-symbols-outlined edit-profile-input-icon">person</span>
-                    </div>
-                </div>
+        <form class="edit-profile-form">
+          <div class="edit-profile-input-group">
+            <label class="edit-profile-label" for="full_name">Full Name</label>
+            <div class="edit-profile-input-wrapper">
+              <input
+                class="edit-profile-input"
+                id="full_name"
+                placeholder="Your name"
+                type="text"
+                value="Sarah Doe"
+              />
+              <span class="material-symbols-outlined edit-profile-input-icon"
+                >person</span
+              >
+            </div>
+          </div>
 
-                <div class="edit-profile-input-group">
-                    <label class="edit-profile-label" for="email_address">Email Address</label>
-                    <div class="edit-profile-input-wrapper">
-                        <input class="edit-profile-input" id="email_address" placeholder="yourname@example.com"
-                            type="email" value="sarah.doe@example.com">
-                        <span class="material-symbols-outlined edit-profile-input-icon">mail</span>
-                    </div>
-                </div>
+          <div class="edit-profile-input-group">
+            <label class="edit-profile-label" for="email_address"
+              >Email Address</label
+            >
+            <div class="edit-profile-input-wrapper">
+              <input
+                class="edit-profile-input"
+                id="email_address"
+                placeholder="yourname@example.com"
+                type="email"
+                value="sarah.doe@example.com"
+              />
+              <span class="material-symbols-outlined edit-profile-input-icon"
+                >mail</span
+              >
+            </div>
+          </div>
 
-                <div class="edit-profile-input-group">
-                    <label class="edit-profile-label" for="phone_number">Phone Number</label>
-                    <div class="edit-profile-input-wrapper">
-                        <input class="edit-profile-input" id="phone_number" placeholder="+1 (000) 000-0000" type="tel"
-                            value="+1 555-0123">
-                        <span class="material-symbols-outlined edit-profile-input-icon">call</span>
-                    </div>
-                    <p class="edit-profile-input-info">
-                        <span class="material-symbols-outlined">info</span>
-                        Used so we can reach you about your orders
-                    </p>
-                </div>
+          <div class="edit-profile-input-group">
+            <label class="edit-profile-label" for="phone_number"
+              >Phone Number</label
+            >
+            <div class="edit-profile-input-wrapper">
+              <input
+                class="edit-profile-input"
+                id="phone_number"
+                placeholder="+1 (000) 000-0000"
+                type="tel"
+                value="+1 555-0123"
+              />
+              <span class="material-symbols-outlined edit-profile-input-icon"
+                >call</span
+              >
+            </div>
+            <p class="edit-profile-input-info">
+              <span class="material-symbols-outlined">info</span>
+              Used so we can reach you about your orders
+            </p>
+          </div>
 
-                <!-- Action Divider -->
-                <div class="edit-profile-divider">
-                    <div class="edit-profile-divider-line"></div>
-                    <span class="material-symbols-outlined edit-profile-divider-icon">auto_awesome</span>
-                    <div class="edit-profile-divider-line"></div>
-                </div>
+          <!-- Action Divider -->
+          <div class="edit-profile-divider">
+            <div class="edit-profile-divider-line"></div>
+            <span class="material-symbols-outlined edit-profile-divider-icon"
+              >auto_awesome</span
+            >
+            <div class="edit-profile-divider-line"></div>
+          </div>
 
-                <!-- Security Card -->
-                <div class="edit-profile-security-card">
-                    <div class="edit-profile-security-left">
-                        <div class="edit-profile-security-icon-wrapper">
-                            <span class="material-symbols-outlined">lock</span>
-                        </div>
-                        <div>
-                            <h3 class="edit-profile-security-title">Change Password</h3>
-                            <p class="edit-profile-security-subtitle">Last changed 3 months ago</p>
-                        </div>
-                    </div>
-                    <span class="material-symbols-outlined edit-profile-security-arrow">chevron_right</span>
-                </div>
-            </form>
+          <!-- Security Card -->
+          <div class="edit-profile-security-card">
+            <div class="edit-profile-security-left">
+              <div class="edit-profile-security-icon-wrapper">
+                <span class="material-symbols-outlined">lock</span>
+              </div>
+              <div>
+                <h3 class="edit-profile-security-title">Change Password</h3>
+                <p class="edit-profile-security-subtitle">
+                  Last changed 3 months ago
+                </p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined edit-profile-security-arrow"
+              >chevron_right</span
+            >
+          </div>
+        </form>
 
-            <button class="edit-profile-delete-btn">
-                <span class="material-symbols-outlined">delete</span>
-                DELETE ACCOUNT
-            </button>
-        </main>
+        <button class="edit-profile-delete-btn">
+          <span class="material-symbols-outlined">delete</span>
+          DELETE ACCOUNT
+        </button>
+      </main>
     </div>
 
     <!-- Share Sheet Modal Overlay -->
     <div class="share-modal-backdrop" id="share-modal-backdrop"></div>
     <div class="share-sheet" id="share-sheet">
-        <div class="share-sheet-handle-bar">
-            <div class="share-sheet-handle"></div>
+      <div class="share-sheet-handle-bar">
+        <div class="share-sheet-handle"></div>
+      </div>
+      <div class="share-sheet-content">
+        <div class="share-sheet-header">
+          <h3 class="share-sheet-title">Share Memory</h3>
+          <button class="share-sheet-close-btn" id="share-sheet-close">
+            <span class="material-symbols-outlined">close</span>
+          </button>
         </div>
-        <div class="share-sheet-content">
-            <div class="share-sheet-header">
-                <h3 class="share-sheet-title">Share Memory</h3>
-                <button class="share-sheet-close-btn" id="share-sheet-close">
-                    <span class="material-symbols-outlined">close</span>
-                </button>
-            </div>
 
-            <div class="share-toggle-row">
-                <div class="share-toggle-text">
-                    <p class="share-toggle-title">Make this memory public</p>
-                    <p class="share-toggle-subtitle">Anyone with the link can view this memory.</p>
-                </div>
-                <label class="share-toggle-switch">
-                    <input type="checkbox" checked>
-                    <span class="share-toggle-track"></span>
-                </label>
-            </div>
+        <div class="share-toggle-row">
+          <div class="share-toggle-text">
+            <p class="share-toggle-title">Make this memory public</p>
+            <p class="share-toggle-subtitle">
+              Anyone with the link can view this memory.
+            </p>
+          </div>
+          <label class="share-toggle-switch">
+            <input type="checkbox" checked />
+            <span class="share-toggle-track"></span>
+          </label>
+        </div>
 
-            <div class="share-link-section">
-                <p class="share-link-label">Memory Link</p>
-                <div class="share-link-row">
-                    <span class="material-symbols-outlined share-link-icon">link</span>
-                    <span class="share-link-url">memento.app/s/sarah-grad...</span>
-                    <button class="share-copy-btn">
-                        <span class="share-copy-label">COPY</span>
-                        <span class="material-symbols-outlined">content_copy</span>
-                    </button>
-                </div>
-            </div>
-
-            <button class="share-main-btn">
-                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">ios_share</span>
-                Share via...
+        <div class="share-link-section">
+          <p class="share-link-label">Memory Link</p>
+          <div class="share-link-row">
+            <span class="material-symbols-outlined share-link-icon">link</span>
+            <span class="share-link-url">memento.app/s/sarah-grad...</span>
+            <button class="share-copy-btn">
+              <span class="share-copy-label">COPY</span>
+              <span class="material-symbols-outlined">content_copy</span>
             </button>
-
-            <div class="share-socials">
-                <div class="share-social-item">
-                    <div class="share-social-icon"><span class="material-symbols-outlined">chat</span></div>
-                    <span class="share-social-label">Messages</span>
-                </div>
-                <div class="share-social-item">
-                    <div class="share-social-icon"><span class="material-symbols-outlined">mail</span></div>
-                    <span class="share-social-label">Mail</span>
-                </div>
-                <div class="share-social-item">
-                    <div class="share-social-icon"><span class="material-symbols-outlined">alternate_email</span>
-                    </div>
-                    <span class="share-social-label">Threads</span>
-                </div>
-                <div class="share-social-item">
-                    <div class="share-social-icon"><span class="material-symbols-outlined">more_horiz</span></div>
-                    <span class="share-social-label">More</span>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <button class="share-main-btn">
+          <span
+            class="material-symbols-outlined"
+            style="font-variation-settings: &quot;FILL&quot; 1"
+            >ios_share</span
+          >
+          Share via...
+        </button>
+
+        <div class="share-socials">
+          <div class="share-social-item">
+            <div class="share-social-icon">
+              <span class="material-symbols-outlined">chat</span>
+            </div>
+            <span class="share-social-label">Messages</span>
+          </div>
+          <div class="share-social-item">
+            <div class="share-social-icon">
+              <span class="material-symbols-outlined">mail</span>
+            </div>
+            <span class="share-social-label">Mail</span>
+          </div>
+          <div class="share-social-item">
+            <div class="share-social-icon">
+              <span class="material-symbols-outlined">alternate_email</span>
+            </div>
+            <span class="share-social-label">Threads</span>
+          </div>
+          <div class="share-social-item">
+            <div class="share-social-icon">
+              <span class="material-symbols-outlined">more_horiz</span>
+            </div>
+            <span class="share-social-label">More</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Shared Bottom Navigation Shell -->
     <nav class="app-bottom-nav" id="app-bottom-nav">
-        <a class="nav-item active" href="#" data-route="home">
-            <span class="material-symbols-outlined">home</span>
-            <span class="nav-item-label">Home</span>
-        </a>
-        <a class="nav-item" href="#" data-route="memory-lane">
-            <span class="material-symbols-outlined">auto_stories</span>
-            <span class="nav-item-label">Memories</span>
-        </a>
-        <a class="nav-item" href="#">
-            <span class="material-symbols-outlined">shopping_bag</span>
-            <span class="nav-item-label">Order</span>
-        </a>
-        <a class="nav-item" href="#" data-route="profile">
-            <span class="material-symbols-outlined">person</span>
-            <span class="nav-item-label">Profile</span>
-        </a>
+      <a class="nav-item active" href="#" data-route="home">
+        <span class="material-symbols-outlined">home</span>
+        <span class="nav-item-label">Home</span>
+      </a>
+      <a class="nav-item" href="#" data-route="memory-lane">
+        <span class="material-symbols-outlined">auto_stories</span>
+        <span class="nav-item-label">Memories</span>
+      </a>
+      <a class="nav-item" href="#">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        <span class="nav-item-label">Order</span>
+      </a>
+      <a class="nav-item" href="#" data-route="profile">
+        <span class="material-symbols-outlined">person</span>
+        <span class="nav-item-label">Profile</span>
+      </a>
     </nav>
 
     <!-- Main Application Script -->
     <script src="js/app.js"></script>
-</body>
-
+  </body>
 </html>

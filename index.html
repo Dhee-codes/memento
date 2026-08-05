@@ -1,129 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+      name="viewport"
+    />
     <title>Memento</title>
     <!-- External Fonts and Icons -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Great+Vibes&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body class="app-body">
-
+  <body class="app-body">
     <!-- SCREEN: WELCOME -->
     <div id="screen-welcome" class="app-screen welcome-screen active">
-        <!-- Background WebGL Shader -->
-        <div class="welcome-shader-wrapper">
-            <canvas id="welcome-shader-canvas"></canvas>
-            <div class="welcome-shader-overlay"></div>
+      <!-- Background WebGL Shader -->
+      <div class="welcome-shader-wrapper">
+        <canvas id="welcome-shader-canvas"></canvas>
+        <div class="welcome-shader-overlay"></div>
+      </div>
+
+      <!-- Floating Content Collage (Scrapbook Elements) -->
+      <div class="welcome-scrapbook-elements">
+        <!-- Floating Word 1 -->
+        <div class="welcome-floating-element welcome-float-word-1">
+          <span class="welcome-text-script-accent">memento</span>
+        </div>
+        <!-- Floating Image 1 (Pastry) -->
+        <div
+          class="welcome-glass-card welcome-floating-element welcome-float-img-1"
+        >
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ5AgILkxg0puDIWYlQqL44mfgk9-69fwIqBE-rtlu_poMrjaQtc2Qfy3sbAciqUbxwmgdPie1Lhz9g79tGB770BmbZ78mNAR4BQtzDuExM3KBKmv0WePhaRXAstya3srsA6q-G6Fhbd3_mAKcMAsI7iCkQLI6QyqzbWH8TK2SCddIRwSIVxnNy9EqSRj7jEaGaQPK32ikDG8vtquVuk0r1VWt7RmXE8hcIBxivtf5_-E-QCYONU2QAA"
+            alt="Croissant"
+          />
+        </div>
+        <!-- Floating Word 2 -->
+        <div class="welcome-floating-reverse welcome-float-word-2">
+          <span class="welcome-text-script-secondary">nostalgia</span>
+        </div>
+        <!-- Floating Image 2 (Cake) -->
+        <div
+          class="welcome-glass-card welcome-floating-element welcome-float-img-2"
+        >
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_hHKUi6aCUX0geYlEbj4IaT_GI2YBQ1RajWp6gxmYPVjemQIs7Me0G-NbizYgQa5p7xE8FRUpRvsRjV7_Evb6-_ZeMR383Pmj7e7-GBd3k246uRd2SXswGiY7uIDPSC3welFtM3kKfVVjyJ6tIUVES9zzWGCMuYFaaDY7sFE0oBXE23urkYg1jCquLWULb8tGAYKwwau3EZDnoDiRnLtqW_2ljAqLjvtRbNprDM7EoY7DlBL3mOb1Dw"
+            alt="Cake"
+          />
+        </div>
+        <!-- Floating Word 3 -->
+        <div class="welcome-floating-element welcome-float-word-3">
+          <span class="welcome-text-script-neutral">our story</span>
+        </div>
+        <!-- Floating Word 4 -->
+        <div class="welcome-floating-reverse welcome-float-word-4">
+          <span class="welcome-text-script-tertiary">remember</span>
+        </div>
+      </div>
+
+      <!-- Main Content Canvas -->
+      <main class="welcome-main-content">
+        <!-- Top Section: Visual Branding -->
+        <div class="welcome-branding">
+          <div class="welcome-brand-mark">
+            <div class="welcome-logo-container">
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnzph71K9FB3Ky9RDzdirkphW-dt48FAP1ObsxXPnKq6ZzGid84OUEX-XYJJ7RHUVNZlamr4SPSPBoXqKn7yjQrGWMy22Qfyj2yGr1HwjpVteQHplIgcEWASv8pA_qYTT1TJNjc04QJUMgCJN4PvMS-8OgG74FCJehpKEJ4oDZwdm_sG2zbXLWXkSYicu4dv8AAVj-B1FCzYC9mB95giU1lu8sTzhbn3PayBcY2CQ8r17RKqFMuJDB7JzIAw-0kb6dHEs"
+                alt="Memento Logomark"
+                class="welcome-logo-img"
+              />
+              <div class="welcome-logo-badge">
+                <span class="material-symbols-outlined welcome-badge-icon"
+                  >favorite</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="welcome-titles">
+            <h1 class="welcome-title-main">Memento</h1>
+            <p class="welcome-title-sub">by Gifthie's Cuisine</p>
+          </div>
         </div>
 
-        <!-- Floating Content Collage (Scrapbook Elements) -->
-        <div class="welcome-scrapbook-elements">
-            <!-- Floating Word 1 -->
-            <div class="welcome-floating-element welcome-float-word-1">
-                <span class="welcome-text-script-accent">memento</span>
-            </div>
-            <!-- Floating Image 1 (Pastry) -->
-            <div class="welcome-glass-card welcome-floating-element welcome-float-img-1">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ5AgILkxg0puDIWYlQqL44mfgk9-69fwIqBE-rtlu_poMrjaQtc2Qfy3sbAciqUbxwmgdPie1Lhz9g79tGB770BmbZ78mNAR4BQtzDuExM3KBKmv0WePhaRXAstya3srsA6q-G6Fhbd3_mAKcMAsI7iCkQLI6QyqzbWH8TK2SCddIRwSIVxnNy9EqSRj7jEaGaQPK32ikDG8vtquVuk0r1VWt7RmXE8hcIBxivtf5_-E-QCYONU2QAA"
-                    alt="Croissant">
-            </div>
-            <!-- Floating Word 2 -->
-            <div class="welcome-floating-reverse welcome-float-word-2">
-                <span class="welcome-text-script-secondary">nostalgia</span>
-            </div>
-            <!-- Floating Image 2 (Cake) -->
-            <div class="welcome-glass-card welcome-floating-element welcome-float-img-2">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_hHKUi6aCUX0geYlEbj4IaT_GI2YBQ1RajWp6gxmYPVjemQIs7Me0G-NbizYgQa5p7xE8FRUpRvsRjV7_Evb6-_ZeMR383Pmj7e7-GBd3k246uRd2SXswGiY7uIDPSC3welFtM3kKfVVjyJ6tIUVES9zzWGCMuYFaaDY7sFE0oBXE23urkYg1jCquLWULb8tGAYKwwau3EZDnoDiRnLtqW_2ljAqLjvtRbNprDM7EoY7DlBL3mOb1Dw"
-                    alt="Cake">
-            </div>
-            <!-- Floating Word 3 -->
-            <div class="welcome-floating-element welcome-float-word-3">
-                <span class="welcome-text-script-neutral">our story</span>
-            </div>
-            <!-- Floating Word 4 -->
-            <div class="welcome-floating-reverse welcome-float-word-4">
-                <span class="welcome-text-script-tertiary">remember</span>
-            </div>
+        <!-- Mid Section: Messaging -->
+        <div class="welcome-messaging">
+          <div class="welcome-message-banner">
+            <div class="welcome-scrapbook-tape"></div>
+            <p class="welcome-message-text">Every order tells a story.</p>
+          </div>
+          <p class="welcome-message-subtext">
+            Capture your sweetest moments, one bite at a time. Your personal
+            culinary scrapbook awaits.
+          </p>
         </div>
 
-        <!-- Main Content Canvas -->
-        <main class="welcome-main-content">
-            <!-- Top Section: Visual Branding -->
-            <div class="welcome-branding">
-                <div class="welcome-brand-mark">
-                    <div class="welcome-logo-container">
-                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnzph71K9FB3Ky9RDzdirkphW-dt48FAP1ObsxXPnKq6ZzGid84OUEX-XYJJ7RHUVNZlamr4SPSPBoXqKn7yjQrGWMy22Qfyj2yGr1HwjpVteQHplIgcEWASv8pA_qYTT1TJNjc04QJUMgCJN4PvMS-8OgG74FCJehpKEJ4oDZwdm_sG2zbXLWXkSYicu4dv8AAVj-B1FCzYC9mB95giU1lu8sTzhbn3PayBcY2CQ8r17RKqFMuJDB7JzIAw-0kb6dHEs"
-                            alt="Memento Logomark" class="welcome-logo-img">
-                        <div class="welcome-logo-badge">
-                            <span class="material-symbols-outlined welcome-badge-icon">favorite</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="welcome-titles">
-                    <h1 class="welcome-title-main">Memento</h1>
-                    <p class="welcome-title-sub">by Gifthie's Cuisine</p>
-                </div>
-            </div>
-
-            <!-- Mid Section: Messaging -->
-            <div class="welcome-messaging">
-                <div class="welcome-message-banner">
-                    <div class="welcome-scrapbook-tape"></div>
-                    <p class="welcome-message-text">
-                        Every order tells a story.
-                    </p>
-                </div>
-                <p class="welcome-message-subtext">
-                    Capture your sweetest moments, one bite at a time. Your personal culinary scrapbook awaits.
-                </p>
-            </div>
-
-            <!-- Bottom Section: Actions -->
-            <div class="welcome-actions">
-                <button class="primary-button" data-route="login">
-                    Log in
-                </button>
-                <div class="welcome-signup-prompt">
-                    <span class="welcome-signup-label">New to Memento?</span>
-                    <button class="welcome-signup-btn" data-route="join">
-                        Create an account
-                    </button>
-                </div>
-            </div>
-        </main>
+        <!-- Bottom Section: Actions -->
+        <div class="welcome-actions">
+          <button class="primary-button" data-route="login">Log in</button>
+          <div class="welcome-signup-prompt">
+            <span class="welcome-signup-label">New to Memento?</span>
+            <button class="welcome-signup-btn" data-route="join">
+              Create an account
+            </button>
+          </div>
+        </div>
+      </main>
     </div>
 
     <!-- Shared Bottom Navigation Shell -->
     <nav class="app-bottom-nav hidden" id="app-bottom-nav">
-        <a class="nav-item active" href="#" data-route="home">
-            <span class="material-symbols-outlined">home</span>
-            <span class="nav-item-label">Home</span>
-        </a>
-        <a class="nav-item" href="#" data-route="memory-lane">
-            <span class="material-symbols-outlined">auto_stories</span>
-            <span class="nav-item-label">Memories</span>
-        </a>
-        <a class="nav-item" href="#">
-            <span class="material-symbols-outlined">shopping_bag</span>
-            <span class="nav-item-label">Order</span>
-        </a>
-        <a class="nav-item" href="#" data-route="profile">
-            <span class="material-symbols-outlined">person</span>
-            <span class="nav-item-label">Profile</span>
-        </a>
+      <a class="nav-item active" href="#" data-route="home">
+        <span class="material-symbols-outlined">home</span>
+        <span class="nav-item-label">Home</span>
+      </a>
+      <a class="nav-item" href="#" data-route="memory-lane">
+        <span class="material-symbols-outlined">auto_stories</span>
+        <span class="nav-item-label">Memories</span>
+      </a>
+      <a class="nav-item" href="#">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        <span class="nav-item-label">Order</span>
+      </a>
+      <a class="nav-item" href="#" data-route="profile">
+        <span class="material-symbols-outlined">person</span>
+        <span class="nav-item-label">Profile</span>
+      </a>
     </nav>
 
     <!-- Main Application Script -->
     <script src="js/app.js"></script>
-</body>
-
+  </body>
 </html>

@@ -1,159 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+      name="viewport"
+    />
     <title>Memento</title>
     <!-- External Fonts and Icons -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Great+Vibes&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body class="app-body">
-
+  <body class="app-body">
     <!-- SCREEN: PROFILE -->
     <div id="screen-profile" class="app-screen profile-screen">
-        <header class="profile-header">
-            <div class="profile-header-left">
-                <button class="profile-header-back-btn material-symbols-outlined" data-action="back">arrow_back</button>
-                <h1 class="profile-header-title">Memento</h1>
+      <header class="profile-header">
+        <div class="profile-header-left">
+          <button
+            class="profile-header-back-btn material-symbols-outlined"
+            data-action="back"
+          >
+            arrow_back
+          </button>
+          <h1 class="profile-header-title">Memento</h1>
+        </div>
+        <div class="profile-header-avatar-small">
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR-9L8WKp5hGhLSJ0E5eI8k7-nrNPUcmL2_1wmmvr7g6-4WOaEQ93kGLec01zaLb5sc8YMX3OjK1-gMlxp3H4H040TlCI4U_iR7x59aGSlbBmH0Xq7dt41DmhJ_e7a3EEB-Xz6n2hlssJ7at3qWDTpW4E7mp-o7d7w3ICZRnfc0ZbZ599yG8j3jMpOWn33Mz4NhPfZQwe2t5abol0XR-REJq4Jk3vddypytEoFe2vuvd3mx6Ln7MHEYw"
+            alt="User"
+          />
+        </div>
+      </header>
+      <main class="profile-main">
+        <section class="profile-user-info fade-in-up">
+          <div class="profile-avatar-large">
+            <img
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEsooT860qbIKcoQCaUbFVniICxVQTeDsIl3qt6aUNMgW4jr4LBVCbY5ZuBApyneFw11w_Y1wCoelUeuBM0CuOHH89cFtr-PrtUPU9b-4PeXmsfQxvyfsQcZ80vYokPkEv4EU6x3OCUvN2B0RZwoFsqJq5kH-OoYKlVs0_u9NIPPeniIx7_cclx6VWEtoeEdDjRzPap_YvMqzIxGjUFOUKVT2a76w34t_w3T9rCrTStYcUIShRWXJpxg"
+              alt="Sarah Doe"
+            />
+          </div>
+          <div class="profile-user-text">
+            <h2 class="profile-user-name">Sarah Doe</h2>
+            <p class="profile-user-email">sarah.doe@example.com</p>
+          </div>
+        </section>
+        <section
+          class="profile-details-section fade-in-up"
+          style="animation-delay: 100ms"
+        >
+          <div class="profile-details-card">
+            <div class="profile-detail-field">
+              <label class="profile-detail-label">Name</label>
+              <div class="profile-detail-value">Sarah Doe</div>
             </div>
-            <div class="profile-header-avatar-small">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR-9L8WKp5hGhLSJ0E5eI8k7-nrNPUcmL2_1wmmvr7g6-4WOaEQ93kGLec01zaLb5sc8YMX3OjK1-gMlxp3H4H040TlCI4U_iR7x59aGSlbBmH0Xq7dt41DmhJ_e7a3EEB-Xz6n2hlssJ7at3qWDTpW4E7mp-o7d7w3ICZRnfc0ZbZ599yG8j3jMpOWn33Mz4NhPfZQwe2t5abol0XR-REJq4Jk3vddypytEoFe2vuvd3mx6Ln7MHEYw"
-                    alt="User">
+            <div class="profile-detail-field">
+              <label class="profile-detail-label">Email</label>
+              <div class="profile-detail-value">sarah.doe@example.com</div>
             </div>
-        </header>
-        <main class="profile-main">
-            <section class="profile-user-info fade-in-up">
-                <div class="profile-avatar-large">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEsooT860qbIKcoQCaUbFVniICxVQTeDsIl3qt6aUNMgW4jr4LBVCbY5ZuBApyneFw11w_Y1wCoelUeuBM0CuOHH89cFtr-PrtUPU9b-4PeXmsfQxvyfsQcZ80vYokPkEv4EU6x3OCUvN2B0RZwoFsqJq5kH-OoYKlVs0_u9NIPPeniIx7_cclx6VWEtoeEdDjRzPap_YvMqzIxGjUFOUKVT2a76w34t_w3T9rCrTStYcUIShRWXJpxg"
-                        alt="Sarah Doe">
-                </div>
-                <div class="profile-user-text">
-                    <h2 class="profile-user-name">Sarah Doe</h2>
-                    <p class="profile-user-email">sarah.doe@example.com</p>
-                </div>
-            </section>
-            <section class="profile-details-section fade-in-up" style="animation-delay: 100ms;">
-                <div class="profile-details-card">
-                    <div class="profile-detail-field">
-                        <label class="profile-detail-label">Name</label>
-                        <div class="profile-detail-value">Sarah Doe</div>
-                    </div>
-                    <div class="profile-detail-field">
-                        <label class="profile-detail-label">Email</label>
-                        <div class="profile-detail-value">sarah.doe@example.com</div>
-                    </div>
-                    <div class="profile-detail-field">
-                        <label class="profile-detail-label">Phone Number</label>
-                        <div class="profile-detail-value">+1 555-0123</div>
-                    </div>
-                </div>
-                <div class="profile-edit-action">
-                    <button class="profile-edit-btn" data-route="edit-profile">
-                        <span class="material-symbols-outlined profile-edit-icon">edit</span>
-                        Edit profile
-                    </button>
-                </div>
-            </section>
-            <footer class="profile-footer fade-in-up" style="animation-delay: 200ms;">
-                <p class="profile-footer-text">Baking memories since 2026</p>
-            </footer>
-        </main>
+            <div class="profile-detail-field">
+              <label class="profile-detail-label">Phone Number</label>
+              <div class="profile-detail-value">+1 555-0123</div>
+            </div>
+          </div>
+          <div class="profile-edit-action">
+            <button class="profile-edit-btn" data-route="edit-profile">
+              <span class="material-symbols-outlined profile-edit-icon"
+                >edit</span
+              >
+              Edit profile
+            </button>
+          </div>
+        </section>
+        <footer
+          class="profile-footer fade-in-up"
+          style="animation-delay: 200ms"
+        >
+          <p class="profile-footer-text">Baking memories since 2026</p>
+        </footer>
+      </main>
     </div>
 
     <!-- Share Sheet Modal Overlay -->
     <div class="share-modal-backdrop" id="share-modal-backdrop"></div>
     <div class="share-sheet" id="share-sheet">
-        <div class="share-sheet-handle-bar">
-            <div class="share-sheet-handle"></div>
+      <div class="share-sheet-handle-bar">
+        <div class="share-sheet-handle"></div>
+      </div>
+      <div class="share-sheet-content">
+        <div class="share-sheet-header">
+          <h3 class="share-sheet-title">Share Memory</h3>
+          <button class="share-sheet-close-btn" id="share-sheet-close">
+            <span class="material-symbols-outlined">close</span>
+          </button>
         </div>
-        <div class="share-sheet-content">
-            <div class="share-sheet-header">
-                <h3 class="share-sheet-title">Share Memory</h3>
-                <button class="share-sheet-close-btn" id="share-sheet-close">
-                    <span class="material-symbols-outlined">close</span>
-                </button>
-            </div>
 
-            <div class="share-toggle-row">
-                <div class="share-toggle-text">
-                    <p class="share-toggle-title">Make this memory public</p>
-                    <p class="share-toggle-subtitle">Anyone with the link can view this memory.</p>
-                </div>
-                <label class="share-toggle-switch">
-                    <input type="checkbox" checked>
-                    <span class="share-toggle-track"></span>
-                </label>
-            </div>
+        <div class="share-toggle-row">
+          <div class="share-toggle-text">
+            <p class="share-toggle-title">Make this memory public</p>
+            <p class="share-toggle-subtitle">
+              Anyone with the link can view this memory.
+            </p>
+          </div>
+          <label class="share-toggle-switch">
+            <input type="checkbox" checked />
+            <span class="share-toggle-track"></span>
+          </label>
+        </div>
 
-            <div class="share-link-section">
-                <p class="share-link-label">Memory Link</p>
-                <div class="share-link-row">
-                    <span class="material-symbols-outlined share-link-icon">link</span>
-                    <span class="share-link-url">memento.app/s/sarah-grad...</span>
-                    <button class="share-copy-btn">
-                        <span class="share-copy-label">COPY</span>
-                        <span class="material-symbols-outlined">content_copy</span>
-                    </button>
-                </div>
-            </div>
-
-            <button class="share-main-btn">
-                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">ios_share</span>
-                Share via...
+        <div class="share-link-section">
+          <p class="share-link-label">Memory Link</p>
+          <div class="share-link-row">
+            <span class="material-symbols-outlined share-link-icon">link</span>
+            <span class="share-link-url">memento.app/s/sarah-grad...</span>
+            <button class="share-copy-btn">
+              <span class="share-copy-label">COPY</span>
+              <span class="material-symbols-outlined">content_copy</span>
             </button>
-
-            <div class="share-socials">
-                <div class="share-social-item">
-                    <div class="share-social-icon"><span class="material-symbols-outlined">chat</span></div>
-                    <span class="share-social-label">Messages</span>
-                </div>
-                <div class="share-social-item">
-                    <div class="share-social-icon"><span class="material-symbols-outlined">mail</span></div>
-                    <span class="share-social-label">Mail</span>
-                </div>
-                <div class="share-social-item">
-                    <div class="share-social-icon"><span class="material-symbols-outlined">alternate_email</span>
-                    </div>
-                    <span class="share-social-label">Threads</span>
-                </div>
-                <div class="share-social-item">
-                    <div class="share-social-icon"><span class="material-symbols-outlined">more_horiz</span></div>
-                    <span class="share-social-label">More</span>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <button class="share-main-btn">
+          <span
+            class="material-symbols-outlined"
+            style="font-variation-settings: &quot;FILL&quot; 1"
+            >ios_share</span
+          >
+          Share via...
+        </button>
+
+        <div class="share-socials">
+          <div class="share-social-item">
+            <div class="share-social-icon">
+              <span class="material-symbols-outlined">chat</span>
+            </div>
+            <span class="share-social-label">Messages</span>
+          </div>
+          <div class="share-social-item">
+            <div class="share-social-icon">
+              <span class="material-symbols-outlined">mail</span>
+            </div>
+            <span class="share-social-label">Mail</span>
+          </div>
+          <div class="share-social-item">
+            <div class="share-social-icon">
+              <span class="material-symbols-outlined">alternate_email</span>
+            </div>
+            <span class="share-social-label">Threads</span>
+          </div>
+          <div class="share-social-item">
+            <div class="share-social-icon">
+              <span class="material-symbols-outlined">more_horiz</span>
+            </div>
+            <span class="share-social-label">More</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Shared Bottom Navigation Shell -->
     <nav class="app-bottom-nav" id="app-bottom-nav">
-        <a class="nav-item active" href="#" data-route="home">
-            <span class="material-symbols-outlined">home</span>
-            <span class="nav-item-label">Home</span>
-        </a>
-        <a class="nav-item" href="#" data-route="memory-lane">
-            <span class="material-symbols-outlined">auto_stories</span>
-            <span class="nav-item-label">Memories</span>
-        </a>
-        <a class="nav-item" href="#">
-            <span class="material-symbols-outlined">shopping_bag</span>
-            <span class="nav-item-label">Order</span>
-        </a>
-        <a class="nav-item" href="#" data-route="profile">
-            <span class="material-symbols-outlined">person</span>
-            <span class="nav-item-label">Profile</span>
-        </a>
+      <a class="nav-item active" href="#" data-route="home">
+        <span class="material-symbols-outlined">home</span>
+        <span class="nav-item-label">Home</span>
+      </a>
+      <a class="nav-item" href="#" data-route="memory-lane">
+        <span class="material-symbols-outlined">auto_stories</span>
+        <span class="nav-item-label">Memories</span>
+      </a>
+      <a class="nav-item" href="#">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        <span class="nav-item-label">Order</span>
+      </a>
+      <a class="nav-item" href="#" data-route="profile">
+        <span class="material-symbols-outlined">person</span>
+        <span class="nav-item-label">Profile</span>
+      </a>
     </nav>
 
     <!-- Main Application Script -->
     <script src="js/app.js"></script>
-</body>
-
+  </body>
 </html>
